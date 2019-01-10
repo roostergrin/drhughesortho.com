@@ -1,4 +1,4 @@
-const route = '//api-v2.roostertest2.com/wp-json'
+const route = '//drhughesortho.roostertest2.com/wp-json'
 
 const api = () => {
   try {
