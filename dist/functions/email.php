@@ -15,7 +15,7 @@ function rg_serve_route () {
 
   $data = json_decode(file_get_contents("php://input"), true);
   $from = 'info@wordpress.com';
-  $to = 'matt@roostergrin.com';
+  $to = 'michael.cheng@roostergrin.com';
   $subject = 'API Contact Form';
   $headers = array('Content-Type: text/html; charset=UTF-8');
   $message = '<html><body>';
@@ -27,7 +27,7 @@ function rg_serve_route () {
   $table_name = $wpdb->prefix . 'emails';
 
   $charset_collate = $wpdb->get_charset_collate();
-  
+
   $sql = "CREATE TABLE IF NOT EXISTS $table_name (
     `id` mediumint(9) NOT NULL AUTO_INCREMENT,
     `email` text NOT NULL,

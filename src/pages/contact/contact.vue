@@ -2,6 +2,7 @@
 
 <script>
 import Loader from 'components/loader/loader'
+import FormContact from 'components/form/form-contact/form-contact'
 
 export default {
   computed: {
@@ -13,7 +14,8 @@ export default {
     }
   },
   components: {
-    Loader
+    Loader,
+    FormContact
   }
 }
 </script>
