@@ -6,9 +6,10 @@ import axios from 'axios'
 export default {
   data: () => {
     return {
-      fullname: '',
-      phone: '',
+      firstname: '',
+      lastname: '',
       email: '',
+      phone: '',
       message: '',
       postUrl: api + '/rg-mail/v1/contact',
       formSubmitted: false,
@@ -19,9 +20,10 @@ export default {
     validate () {
       this.$validator.validateAll()
       axios.post(this.postUrl, {
-        fullname: this.fullname,
-        phone: this.phone,
+        firstname: this.firstname,
+        lastname: this.lastname,
         email: this.email,
+        phone: this.phone,
         message: this.message
       })
         .then(res => { console.log(res) })
