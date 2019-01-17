@@ -1,0 +1,17 @@
+.menu(v-if='props')
+  .menu__container
+    .menu__link-wrapper(v-for='(link, i) in links', :key='i', v-if='link.navigation', :style="styleObject", :class="{'not-active': $store.state.menu}")
+      // For Videos
+      .menu__link-container(v-if='link.video')
+        video.menu__link-video(:src='link.video' loop muted autoplay)
+        .menu__link-name(v-html='link.name')
+      
+      //For Images
+      .menu__link-container(v-if='link.image', :style="{ backgroundImage: 'url(' + link.image + ') '}")
+        .menu__link-name(v-html='link.name')
+          
+    .menu__social-links(:class="{ 'menu__social-links--active': $store.state.menu }")
+      a.menu__facebook(:href='props.acf.navigation.facebook', target='_blank')
+        Icon(name='Facebook')
+      a.menu__instagram(:href='props.acf.navigation.instagram', target='_blank')
+        Icon(name='Instagram')

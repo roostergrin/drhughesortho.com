@@ -2,6 +2,7 @@
 
 <script>
 import Loader from 'components/loader/loader'
+import CustomHomeWelcome from 'components/custom/custom-home-welcome/custom-home-welcome'
 
 export default {
   computed: {
@@ -13,7 +14,8 @@ export default {
     }
   },
   components: {
-    Loader
+    Loader,
+    CustomHomeWelcome
   }
 }
 </script>

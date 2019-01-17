@@ -1,0 +1,83 @@
+.menu
+  width: 100%
+  height: 100%
+
+  &__container
+    display: flex
+    position: absolute
+    top: 55%
+    left: 50%
+    flex-wrap: wrap
+    justify-content: center
+    transform: translate(-50%, -50%)
+    z-index: 99
+    padding: 1rem
+    width: 100%
+
+  &__link-wrapper
+    display: flex
+    position: relative
+    opacity: 0
+    z-index: 1
+    padding: 0.75rem
+
+    &.not-active
+      animation: fad .35s ease-in-out forwards .85s
+      opacity: 0
+
+      @keyframes fad
+        0%
+          opacity: 0
+        100%
+          opacity: 1
+
+  &__link-container
+    position: relative
+    transition: transform .55s ease-in-out, opacity .35s ease-in-out
+    background-repeat: no-repeat
+    background-position: top
+    background-size: cover
+    width: 100%
+    height: 100%
+    overflow: hidden
+
+  &__link-video
+    position: absolute
+    width: 100%
+    height: 100%
+    object-fit: cover !important
+
+  &__link-name
+    position: absolute
+    bottom: 10%
+    left: 50%
+    transform: translateX(-50%)
+    text-transform: uppercase
+    white-space: nowrap
+    color: $white
+    font-size: 24px
+    font-weight: 700
+
+  &__social-links
+    position: absolute
+    top: 50%
+    right: 6%
+    transform: translateY(-50%)
+    transition: opacity .25s ease-in-out
+    opacity: 0
+
+
+    &--active
+      transition: opacity .35s ease-in-out 1.2s
+      opacity: 1
+
+  &__facebook,
+  &__instagram
+    width: 45px
+    height: 45px
+
+    svg
+      margin: 9px 0
+      width: 45px
+      height: 45px
+      fill: $white

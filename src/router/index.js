@@ -20,37 +20,43 @@ const router = new VueRouter({
       path: '/',
       name: 'Home',
       navigation: true,
-      component: Home
+      component: Home,
+      video: '/static/HomeVideo.mp4'
     },
     {
       path: '/about-us',
       name: 'About Us',
       navigation: true,
-      component: AboutUs
+      component: AboutUs,
+      image: '/static/AboutHero.jpg'
     },
     {
       path: '/first-visit',
       name: 'First Visit',
       navigation: true,
-      component: FirstVisit
+      component: FirstVisit,
+      video: '/static/FirstVisitVideo.mp4'
     },
     {
       path: '/treatments',
       name: 'Treatments',
       navigation: true,
-      component: Treatments
+      component: Treatments,
+      image: '/static/TreatmentsHero.jpg'
     },
     {
       path: '/community',
-      name: 'Community',
+      name: 'Our Community',
       navigation: true,
-      component: Community
+      component: Community,
+      image: '/static/OurCommunityHero.jpg'
     },
     {
       path: '/contact',
       name: 'Contact',
       navigation: true,
-      component: Contact
+      component: Contact,
+      image: '/static/ContactHero.jpg'
     },
     {
       path: '/styleguide',

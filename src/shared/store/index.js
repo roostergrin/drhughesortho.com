@@ -15,6 +15,7 @@ const store = new Vuex.Store({
     types: {},
     showModal: {},
     modalContent: {},
+    menu: {},
     loading: true
   },
   mutations: mutations,

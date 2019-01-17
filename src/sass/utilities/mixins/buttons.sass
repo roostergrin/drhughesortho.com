@@ -293,3 +293,18 @@
     &:after
       transform: scale(1)
       transition: all $duration ease-in-out
+
+@mixin button-lime-green
+  display: inline-block
+  transition: all 0.4s ease-in-out
+  border-radius: 3px
+  box-shadow: 0 3px 6px 0 rgba(35, 35, 35, 0.36)
+  background: $limegreen
+  padding: 16px 18px
+  text-transform: uppercase
+  color: $white
+
+  &:hover
+    box-shadow: none
+    background: $forestgreen
+    cursor: pointer

@@ -29,6 +29,37 @@
   &-leave-active
     opacity: 0
 
+.home-fade
+  backface-visibility: hidden
+
+  &-enter-active
+    transition-property: opacity
+    transition-duration: .35s
+    transition-timing-function: ease-in-out
+
+  &-leave-active
+    transition-delay: .35s
+    transition-property: opacity
+    transition-duration: .65s
+
+  &-enter,
+  &-leave-active
+    opacity: 0
+
+.social-fade
+  &-enter-active
+    transition-property: opacity
+    transition-duration: .35s
+    transition-timing-function: ease-in-out
+
+  &-leave-active
+    transition-property: opacity
+    transition-duration: 0s
+
+  &-enter,
+  &-leave-active
+    opacity: 0
+
 // -------------------------------------
 // Slides
 // -------------------------------------

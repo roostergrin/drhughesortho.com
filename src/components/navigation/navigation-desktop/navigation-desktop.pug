@@ -1,3 +1,22 @@
-.navigation-desktop
-  span(v-for='link in links')
-    router-link(:to='link.path', v-html='link.name')
+.navigation-desktop(v-if='props')
+  .navigation-desktop__container
+    .navigation-desktop__item
+      a.navigation-desktop__phone(:href='props.acf.navigation.phone_link')
+        Icon.navigation-desktop__phone--icon(name='Phone')
+        .navigation-desktop__phone--number(v-html='props.acf.navigation.phone')
+    .navigation-desktop__item
+      .navigation-desktop__logo-container
+        Icon.navigation-desktop__logo(name='LogoColor')
+    .navigation-desktop__item
+      .navigation-desktop__login-container
+        Icon.navigation-desktop__login-icon(name='Login')
+        .navigation-desktop__login-text Login
+      .navigation-desktop__menu-container(@click='toggleMenu')
+        .navigation-desktop__menu
+          span(v-if='!$store.state.menu') Menu
+          span(v-if='$store.state.menu') Exit
+        .navigation-desktop__hamburger(:class="{ 'navigation-desktop__hamburger--active': $store.state.menu }")
+          span
+          span
+          span
+          span
