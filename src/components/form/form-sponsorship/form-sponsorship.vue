@@ -25,6 +25,20 @@ export default {
   methods: {
     validate () {
       this.$validator.validateAll()
+        .then(result => {
+          if (result) {
+            this.onSubmit()
+          }
+          if (!result) {
+            setTimeout(() => { this.$scrollTo('#form-sponsorship', { offset: -135 }) }, 300)
+          }
+        })
+        .catch((e) => {
+          console.log(e)
+        })
+    },
+    onSubmit () {
+      this.formSubmitted = true
       axios.post(this.postUrl, {
         firstname: this.firstname,
         lastname: this.lastname,
@@ -37,7 +51,21 @@ export default {
         description: this.description,
         moneyrequested: this.moneyrequested
       })
-        .then(res => { console.log(res) })
+        .then(res => {
+          setTimeout(() => {
+            this.formSuccess = true
+            this.firstname = ''
+            this.lastname = ''
+            this.email = ''
+            this.phone = ''
+            this.day = ''
+            this.time = ''
+            this.organization = ''
+            this.eventname = ''
+            this.description = ''
+            this.moneyrequested = ''
+          }, 500)
+        })
         .catch(e => { console.log(e) })
     }
   }

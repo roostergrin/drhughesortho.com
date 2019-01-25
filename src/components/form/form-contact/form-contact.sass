@@ -1,0 +1,66 @@
+.form-contact
+  &__background
+    padding-top: 64px
+    padding-bottom: 72px
+
+  &__tagline
+    text-align: center
+    line-height: 28px
+    color: $deepseagreen
+    font-size: 20px
+    font-weight: 700
+
+  &__container
+    margin: 0 auto
+    margin-top: 64px
+    padding: 0 30px
+    max-width: 609px
+
+  &__group
+    position: relative
+
+  &__input
+    margin-bottom: 36px
+    border-bottom: 1px solid $gullgray
+    background: transparent
+    padding-bottom: 6px
+    padding-left: 12px
+    width: 100%
+    color: $mineshaft
+
+    &:focus
+      outline: none
+
+    &::placeholder
+      color: $mineshaft
+      font-size: 16px
+
+  &__button-group
+    position: relative
+
+  &__submit-button
+    display: inline-block
+    border-radius: 3px
+    box-shadow: 0 3px 6px 0 rgba(35, 35, 35, 0.36)
+    background: $limegreen
+    padding: 19px 90px
+    color: $white
+
+    &:hover
+      cursor: pointer
+
+  &__spinner
+    position: absolute
+    bottom: -32px
+    left: calc(50% - 50px)
+    width: 100px
+
+  &__thank-you
+    text-align: center
+    font-weight: 700
+
+  &__message
+    position: absolute
+    top: 30px
+    left: 0
+    color: $danger

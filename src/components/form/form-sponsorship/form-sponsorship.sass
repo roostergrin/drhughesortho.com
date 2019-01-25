@@ -110,6 +110,9 @@
     width: 25px
     height: 25px
 
+  &__button-group
+    position: relative
+
   &__submit-button
     display: inline-block
     border-radius: 3px
@@ -117,3 +120,16 @@
     background: $limegreen
     padding: 19px 90px
     color: $white
+
+    &:hover
+      cursor: pointer
+
+  &__spinner
+    position: absolute
+    bottom: -32px
+    left: calc(50% - 50px)
+    width: 100px
+
+  &__thank-you
+    text-align: center
+    font-weight: 700

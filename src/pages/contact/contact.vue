@@ -7,7 +7,7 @@ import FormContact from 'components/form/form-contact/form-contact'
 export default {
   computed: {
     props () {
-      return this.$store.state.pages.community
+      return this.$store.state.pages.contact
     },
     loading () {
       return this.$store.state.loading

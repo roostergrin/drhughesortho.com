@@ -1,8 +1,10 @@
-.form-sponsorship(v-if='props')
+.form-sponsorship#form-sponsorship(v-if='props')
   .form-sponsorship__background(:style="{ backgroundImage: 'url(' + props.background + ')'}")
     .form-sponsorship__container
       .form-sponsorship__title(v-html='props.title')
-      .form-sponsorship__tagline(v-html='props.tagline')
+      .form-sponsorship__tagline(v-html='props.tagline', v-if='!formSuccess')
+        
+      .form-sponsorship__thank-you(v-if='formSuccess') Thank you for your submission! We will reply to you shortly!
         
       form.form-sponsorship__form(@submit.prevent='validate', method='post', v-if='!formSuccess')
         
@@ -83,3 +85,5 @@
         .form-sponsorship__button-group
           center
             .form-sponsorship__submit-button(@click='validate', :disabled='formSubmitted') Submit
+            .form-sponsorship__spinner(v-if='formSubmitted && !formSuccess') Sending
+          

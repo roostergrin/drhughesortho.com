@@ -16,9 +16,24 @@ export default {
       formSuccess: false
     }
   },
+  props: ['props'],
   methods: {
     validate () {
       this.$validator.validateAll()
+        .then(result => {
+          if (result) {
+            this.onSubmit()
+          }
+          if (!result) {
+            setTimeout(() => { this.$scrollTo('#form-contact', { offset: -135 }) }, 300)
+          }
+        })
+        .catch((e) => {
+          console.log(e)
+        })
+    },
+    onSubmit () {
+      this.formSubmitted = true
       axios.post(this.postUrl, {
         firstname: this.firstname,
         lastname: this.lastname,
@@ -26,9 +41,21 @@ export default {
         phone: this.phone,
         message: this.message
       })
-        .then(res => { console.log(res) })
+        .then(res => {
+          setTimeout(() => {
+            this.formSuccess = true
+            this.firstname = ''
+            this.lastname = ''
+            this.email = ''
+            this.phone = ''
+            this.message = ''
+          }, 500)
+        })
         .catch(e => { console.log(e) })
     }
+  },
+  created () {
+    console.log(this.props)
   }
 }
 </script>

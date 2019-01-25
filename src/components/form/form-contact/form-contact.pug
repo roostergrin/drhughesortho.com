@@ -1,32 +1,34 @@
-.form-contact
-  .form-contact__thank-you(v-if='formSuccess')
-  form.form-contact__form(@submit.prevent='validate', method='post', v-if='!formSuccess')
-    
-    .form-contact__group
-      input.form-contact__input(name='firstname', v-model='firstname', v-validate="'required|alpha_spaces'", :class="{ 'form-contact__input--error': errors.has('firstname') }", type='text', placeholder='First Name')
-      .form-contact__message
-          span(v-show="errors.has('firstname')") Your first name is required.
-          
-    .form-contact__group
-      input.form-contact__input(name='lastname', v-model='lastname', v-validate="'required|alpha_spaces'", :class="{ 'form-contact__input--error': errors.has('lastname') }", type='text', placeholder='Last Name')
-      .form-contact__message
-          span(v-show="errors.has('lastname')") Your last name is required.
-    
-    .form-contact__group
-      input.form-contact__input(name='email', v-model='email', v-validate="'required|email'", :class="{ 'input': true, 'form-contact__input--error': errors.has('email') }", placeholder='Email')
-      .form-contact__message
-        span(v-show="errors.has('email')") Please input a valid e-mail.
-    
-    .form-contact__group
-      input.form-contact__input(name='phone', v-model='phone', v-validate="'required|numeric'", :class="{ 'input': true, 'form-contact__input--error': errors.has('phone') }", placeholder='Phone Number')
-      .form-contact__message
-        span(v-show="errors.has('phone')") Please input a valid phone number
-    
-    .form-contact__group
-      textarea.form-contact__input.form-contact__input--textarea(name='message', v-model='message' placeholder='Message')
-    
-    .form-contact__button-group
-      button.form-contact__submit-button(@click='validate', type='submit', :disabled='formSubmitted')
-        span Submit
-      .form-contact__spinner(v-if='formSubmitted')
-        span Sending ...  
+.form-contact#form-contact(v-if='props')
+  .form-contact__background
+    .form-contact__tagline(v-html='props.tagline', v-if='formSuccess')
+    .form-contact__thank-you(v-if='!formSuccess') Thank you for your submission! We will reply to you shortly!
+    .form-contact__container
+      form.form-contact__form(@submit.prevent='validate', method='post', v-if='formSuccess')
+        
+        .form-contact__group
+          input.form-contact__input(name='firstname', v-model='firstname', v-validate="'required|alpha_spaces'", :class="{ 'form-contact__input--error': errors.has('firstname') }", type='text', placeholder='First Name')
+          .form-contact__message
+              span(v-show="errors.has('firstname')") Your first name is required.
+              
+        .form-contact__group
+          input.form-contact__input(name='lastname', v-model='lastname', v-validate="'required|alpha_spaces'", :class="{ 'form-contact__input--error': errors.has('lastname') }", type='text', placeholder='Last Name')
+          .form-contact__message
+              span(v-show="errors.has('lastname')") Your last name is required.
+        
+        .form-contact__group
+          input.form-contact__input(name='email', v-model='email', v-validate="'required|email'", :class="{ 'input': true, 'form-contact__input--error': errors.has('email') }", placeholder='Email')
+          .form-contact__message
+            span(v-show="errors.has('email')") Please input a valid e-mail.
+        
+        .form-contact__group
+          input.form-contact__input(name='phone', v-model='phone', v-validate="'required|numeric'", :class="{ 'input': true, 'form-contact__input--error': errors.has('phone') }", placeholder='Phone Number')
+          .form-contact__message
+            span(v-show="errors.has('phone')") Please input a valid phone number
+        
+        .form-contact__group
+          textarea.form-contact__input.form-contact__input--textarea(name='message', v-model='message' placeholder='Message')
+        
+        .form-contact__button-group
+          center
+            .form-contact__submit-button(@click='validate', :disabled='formSubmitted') Submit
+            .form-contact__spinner(v-if='formSubmitted && !formSuccess') Sending
