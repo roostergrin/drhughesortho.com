@@ -1,0 +1,8 @@
+.slider-office
+  swiper.slider-office__slider(:options='swiperOption')
+    swiper-slide.slider-office__slide(v-for='(slide, i) in props.gallery', :key='i')
+      .slider-office__image(:style='"backgroundImage: url(" + slide.image + ");"')
+  .slider-office__prev-arrow
+    Icon(name='PrevArrow')
+  .slider-office__next-arrow
+    Icon(name='NextArrow')

@@ -1,0 +1,8 @@
+.custom-treatments-tech(v-if='props')
+  .custom-treatments-tech__background
+    .custom-treatments-tech__container
+      .custom-treatments-tech__col
+        .custom-treatments-tech__title(v-html='props.title')
+        .custom-treatments-tech__content(v-html='props.content')
+      .custom-treatments-tech__col
+        .custom-treatments-tech__image(:style="{ backgroundImage: 'url(' + props.image + ')'}")

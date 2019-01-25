@@ -1,0 +1,34 @@
+.slider-office
+  position: relative
+
+  &__slider
+    max-width: 890px
+
+  &__image
+    @extend .image-norm
+    width: 100%
+    height: 600px
+
+  &__prev-arrow,
+  &__next-arrow
+    position: absolute
+    top: 50%
+    width: 43px
+    height: 43px
+
+    svg
+      width: 43px
+      height: 43px
+      fill: $gullgray
+
+    &:hover
+      cursor: pointer
+
+    &:focus
+      outline: none
+
+  &__prev-arrow
+    left: 0
+
+  &__next-arrow
+    right: 0

@@ -1,0 +1,11 @@
+.block-testimonials
+  .block-testimonials__partial-background
+  .block-testimonials__container
+    .block-testimonials__title(v-html='props.title')
+    .block-testimonials__testimonials
+      .block-testimonials__testimonial(v-for='(testimonial, i) in props.testimonials', :key='i')
+        .block-testimonials__quotes
+          Icon(name='Quotes')
+        .block-testimonials__image(:style="{ backgroundImage: 'url(' + testimonial.image + ')' }")
+        .block-testimonials__review(v-html='testimonial.review')
+        .block-testimonials__name(v-html='testimonial.name')

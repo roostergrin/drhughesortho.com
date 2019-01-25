@@ -1,3 +1,8 @@
 .pages-treatments
   Loader(v-show='loading')
-  h1 Treatments Page
+  div(v-if='props')
+    BlockRows(:props='props.block_rows')
+    CustomTreatmentsBraces(:props='props.custom_treatments_braces')
+    CustomTreatmentsTech(:props='props.custom_treatments_tech')
+    BlockTestimonials(:props='props.block_testimonials')
+    BlockGallery(:props='props.block_gallery')

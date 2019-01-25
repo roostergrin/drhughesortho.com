@@ -3,6 +3,9 @@
 <script>
 import Loader from 'components/loader/loader'
 import CustomHomeWelcome from 'components/custom/custom-home-welcome/custom-home-welcome'
+import BlockParallax from 'components/block/block-parallax/block-parallax'
+import BlockTestimonials from 'components/block/block-testimonials/block-testimonials'
+import BlockGallery from 'components/block/block-gallery/block-gallery'
 
 export default {
   computed: {
@@ -15,7 +18,10 @@ export default {
   },
   components: {
     Loader,
-    CustomHomeWelcome
+    CustomHomeWelcome,
+    BlockParallax,
+    BlockTestimonials,
+    BlockGallery
   }
 }
 </script>

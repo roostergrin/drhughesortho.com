@@ -1,0 +1,24 @@
+.block-gallery
+
+  &__container
+    display: flex
+    justify-content: space-between
+    margin: 0 auto
+    padding: 64px 30px
+    max-width: 1188px
+
+  &__image
+    @extend .image-norm
+    transition: opacity 0.4s ease-in-out
+    opacity: 0
+    width: calc(33.33% - 16px)
+    height: 356px
+
+    &:first-child
+      margin-right: 24px
+
+    &:last-child
+      margin-left: 24px
+
+    &--active
+      opacity: 1

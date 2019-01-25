@@ -1,0 +1,85 @@
+.form-sponsorship(v-if='props')
+  .form-sponsorship__background(:style="{ backgroundImage: 'url(' + props.background + ')'}")
+    .form-sponsorship__container
+      .form-sponsorship__title(v-html='props.title')
+      .form-sponsorship__tagline(v-html='props.tagline')
+        
+      form.form-sponsorship__form(@submit.prevent='validate', method='post', v-if='!formSuccess')
+        
+        .form-sponsorship__group
+          input.form-sponsorship__input(name='firstname', v-model='firstname', v-validate="'required|alpha_spaces'", :class="{ 'form-sponsorship__input--error': errors.has('firstname') }", type='text', placeholder='First Name')
+          .form-sponsorship__message
+            span(v-show="errors.has('firstname')") Your first name is required.
+            
+        .form-sponsorship__group
+          input.form-sponsorship__input(name='lastname', v-model='lastname', v-validate="'required|alpha_spaces'", :class="{ 'form-sponsorship__input--error': errors.has('lastname') }", type='text', placeholder='Last Name')
+          .form-sponsorship__message
+            span(v-show="errors.has('lastname')") Your last name is required.
+            
+        .form-sponsorship__group
+          input.form-sponsorship__input(name='email', v-model='email', v-validate="'required|email'", :class="{ 'form-sponsorship__input--error': errors.has('email') }", type='text', placeholder='Email Address')
+          .form-sponsorship__message
+            span(v-show="errors.has('email')") Valid email required.
+            
+        .form-sponsorship__group
+          input.form-sponsorship__input(name='phone', v-model='phone', v-validate="'required|numeric'", :class="{ 'form-sponsorship__input--error': errors.has('phone') }", type='text', placeholder='Phone Number')
+          .form-sponsorship__message
+            span(v-show="errors.has('phone')") Numeric values only.
+            
+        .form-sponsorship__group
+          .form-sponsorship__checkbox-label When is it best to call you back?
+          .form-sponsorship__checkbox-container
+            .form-sponsorship__radio
+              .form-sponsorship__radio-group
+                input.form-sponsorship__input--radio(name='day', v-model='day', value='Monday', type='radio')
+                span.form-sponsorship__radio-overlay
+                label.form-sponsorship__label Monday
+              .form-sponsorship__radio-group
+                input.form-sponsorship__input--radio(name='day', v-model='day', value='Tuesday', type='radio')
+                span.form-sponsorship__radio-overlay
+                label.form-sponsorship__label Tuesday
+              .form-sponsorship__radio-group
+                input.form-sponsorship__input--radio(name='day', v-model='day', value='Wednesday', type='radio')
+                span.form-sponsorship__radio-overlay
+                label.form-sponsorship__label Wednesday
+              .form-sponsorship__radio-group
+                input.form-sponsorship__input--radio(name='day', v-model='day', value='Thursday', type='radio')
+                span.form-sponsorship__radio-overlay
+                label.form-sponsorship__label Thursday
+              .form-sponsorship__radio-group
+                input.form-sponsorship__input--radio(name='day', v-model='day', value='Friday', type='radio')
+                span.form-sponsorship__radio-overlay
+                label.form-sponsorship__label Friday
+            .form-sponsorship__radio
+              .form-sponsorship__radio-group
+                input.form-sponsorship__input--radio(name='time', v-model='time', value='Morning', type='radio')
+                span.form-sponsorship__radio-overlay
+                label.form-sponsorship__label Morning
+              .form-sponsorship__radio-group
+                input.form-sponsorship__input--radio(name='time', v-model='time', value='Afternoon', type='radio')
+                span.form-sponsorship__radio-overlay
+                label.form-sponsorship__label Afternoon
+              .form-sponsorship__radio-group
+                input.form-sponsorship__input--radio(name='time', v-model='time', value='Evening', type='radio')
+                span.form-sponsorship__radio-overlay
+                label.form-sponsorship__label Evening
+              .form-sponsorship__radio-group
+                input.form-sponsorship__input--radio(name='time', v-model='time', value='Other', type='radio')
+                span.form-sponsorship__radio-overlay
+                label.form-sponsorship__label Other
+            
+        .form-sponsorship__group
+          input.form-sponsorship__input(name='organization', v-model='organization', :class="{ 'form-sponsorship__input--error': errors.has('organization') }", type='text', placeholder='Name of the Organization')
+            
+        .form-sponsorship__group
+          input.form-sponsorship__input(name='eventname', v-model='eventname', :class="{ 'form-sponsorship__input--error': errors.has('eventname') }", type='text', placeholder='Name of the Event')
+            
+        .form-sponsorship__group
+          input.form-sponsorship__input(name='description', v-model='description', :class="{ 'form-sponsorship__input--error': errors.has('description') }", type='text', placeholder='Brief Description')
+            
+        .form-sponsorship__group
+          input.form-sponsorship__input(name='moneyrequested', v-model='moneyrequested', :class="{ 'form-sponsorship__input--error': errors.has('moneyrequested') }", type='text', placeholder='How much money requested and what is it for?')
+
+        .form-sponsorship__button-group
+          center
+            .form-sponsorship__submit-button(@click='validate', :disabled='formSubmitted') Submit

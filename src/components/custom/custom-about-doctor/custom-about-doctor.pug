@@ -1,0 +1,15 @@
+.custom-about-doctor(v-if='props')
+  .custom-about-doctor__container
+    .custom-about-doctor__doctor(v-for='(doctor, i) in props.doctors', :key='i')
+      .custom-about-doctor__col
+        .custom-about-doctor__title(v-html='doctor.title')
+        .custom-about-doctor__tagline(v-html='doctor.tagline')
+        .custom-about-doctor__bio(v-html='doctor.bio')
+        .custom-about-doctor__tab-container
+          .custom-about-doctor__labels
+            .custom-about-doctor__label(v-for='(label, j) in doctor.tabs', :key='j', :class="{ 'custom-about-doctor__label--active': i !== activeDoctor && j === 0 || j === activeTab && i === activeDoctor }", v-html='label.label', @click='setActive(i, j)')
+          .custom-about-doctor__tabs
+            .custom-about-doctor__body(v-for='(body, k) in doctor.tabs', :key='k', :class="{ 'custom-about-doctor__body--active': i !== activeDoctor && k === 0 || k === activeTab && i === activeDoctor }", v-html='body.body')
+          
+      .custom-about-doctor__col
+        .custom-about-doctor__image(:style="{ backgroundImage: 'url(' + doctor.image + ')' }")

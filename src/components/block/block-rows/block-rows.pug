@@ -1,0 +1,9 @@
+.block-rows
+  .block-rows__background
+    .block-rows__container
+      .block-rows__row(v-for='(row, i) in props.rows', :key='i')
+        .block-rows__col
+          .block-rows__content(v-html='row.content')
+        .block-rows__col
+          .block-rows__image(:style="{ backgroundImage: 'url(' + row.image + ') '}")
+          

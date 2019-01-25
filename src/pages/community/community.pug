@@ -1,3 +1,5 @@
 .pages-community
   Loader(v-show='loading')
-  h1 Community Page
+  div(v-if='props')
+    CustomCommunityIntro(:props='props.custom_community_intro')
+    FormSponsorship(:props='props.form_sponsorship')
