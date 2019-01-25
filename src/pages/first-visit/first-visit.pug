@@ -1,3 +1,6 @@
 .pages-first-visit
   Loader(v-show='loading')
-  h1 First Visit Page
+  div(v-if='props')
+    BlockRows(:props='props.block_rows')
+    BlockParallax(:props='props.block_parallax')
+    BlockTestimonials(:props='props.block_testimonials')

@@ -3,23 +3,102 @@
   height: 100%
 
   &__container
+    // @extend .flex-container-lg
     display: flex
     position: absolute
-    top: 55%
+    top: 50%
     left: 50%
     flex-wrap: wrap
     justify-content: center
     transform: translate(-50%, -50%)
-    z-index: 99
+    margin: 0 auto
     padding: 1rem
     width: 100%
+    // remove max-width to not break wrap at higher widths
+    max-width: none
+
+  &__overlay
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    z-index: 10
+
+  &__title
+    // @extend h1
+    &--white
+      color: $limegreen
+
+  &__link-video
+    position: absolute
+    width: 100%
+    height: 100%
+    object-fit: cover !important
+
+  &__link-container-video,
+  &__link-container-image
+    position: relative
+    transition: transform .55s ease-in-out, opacity .35s ease-in-out
+    background: $limegreen
+    background-repeat: no-repeat
+    background-position: top
+    background-size: cover
+    width: 100%
+    height: 100%
+    overflow: hidden
+
+    &--disabled
+      pointer-events: none
+
+    .menu__link-wrapper &
+      opacity: 1
+
+    .menu__link-wrapper--current &
+      opacity: 1
+
+  &__link-overlay
+    position: absolute
+    top: 0
+    left: 0
+    transition: opacity .25s ease-in-out .85s
+    opacity: 1
+    background: rgba($black, .35)
+    width: 100%
+    height: 100%
+
+  &__link
+    position: absolute
+    bottom: 10%
+    left: 50%
+    transform: translateX(-50%)
+    transition: opacity .25s ease-in-out .85s
+    opacity: 1
+    cursor: pointer
+    padding-top: .8rem
+    padding-bottom: 6px
+    text-transform: uppercase
+    letter-spacing: .864px
+    white-space: nowrap
+    color: $white
+    font-size: 20px
+    font-weight: 600
+
+    &:hover
+      transition: color .35s ease-in-out
+      //sass-lint:disable-all
+      color: lighten($limegreen, 40)
+      // sass-lint:enable-all
 
   &__link-wrapper
     display: flex
     position: relative
-    opacity: 0
+    // transition z-index to delay current class being removed - avoids thumbs displaying while fading
+    transition: transform .85s cubic-bezier(.51, .92, .24, 1) .35s, padding .25s ease-in-out .85s, z-index .35s linear .35s
     z-index: 1
-    padding: 0.75rem
+    padding: .5rem
+
+    &--current
+      z-index: 9
 
     &.not-active
       animation: fad .35s ease-in-out forwards .85s
@@ -31,53 +110,231 @@
         100%
           opacity: 1
 
-  &__link-container
+    &.active
+      transition: padding .35s ease-in-out, transform .65s ease-in-out .35s
+      padding: 0
+      // opacity: 1
+      pointer-events: none
+
+      .menu__link,
+      .menu__link-overlay,
+      .menu__submenu
+        transition: opacity .35s ease-in-out
+        opacity: 0
+
+      .menu__link-expanded-overlay
+        position: absolute
+        top: 0
+        transition: background .35s ease-in-out
+        background: linear-gradient(180deg, rgba($black, .25), transparent)
+        width: 100%
+        height: 100%
+
+      // where the magic happens transform 4x large, and translate to center before expanding
+      &:first-child
+        transform: translate(100%, 50%) matrix(4, 0, 0, 4, 0, 0)
+
+
+      &:nth-child(2)
+        transform: translate(0, 100%) matrix(4, 0, 0, 4, 0, 0)
+
+
+      &:nth-child(3)
+        transform: translate(-100%, 50%) matrix(4, 0, 0, 4, 0, 0)
+
+
+      &:nth-child(4)
+        transform: translate(100%, -50%) matrix(4, 0, 0, 4, 0, 0)
+
+
+      &:nth-child(5)
+        transform: translate(0, -50%) matrix(4, 0, 0, 4, 0, 0)
+
+
+      &:nth-child(6)
+        transform: translate(-100%, -50%) matrix(4, 0, 0, 4, 0, 0)
+
+  &__link-expanded-overlay
+    position: absolute
+    transition: background .35s ease-in-out
+    background: linear-gradient(180deg, rgba($black, .25), transparent)
+    width: 100%
+    height: 100%
+
+  &__submenu
+    display: flex
     position: relative
-    transition: transform .55s ease-in-out, opacity .35s ease-in-out
-    background-repeat: no-repeat
-    background-position: top
-    background-size: cover
-    width: 100%
-    height: 100%
-    overflow: hidden
+    flex-direction: column
+    transition: opacity .25s ease-in-out 1.15s
+    margin-left: 2rem
+    cursor: pointer
+    padding-top: .5rem
 
-  &__link-video
-    position: absolute
-    width: 100%
-    height: 100%
-    object-fit: cover !important
+    &-link
+      transition: color .35s ease-in-out
+      letter-spacing: .4px
+      color: $white
+      font-size: 16.4px
 
-  &__link-name
-    position: absolute
-    bottom: 10%
-    left: 50%
-    transform: translateX(-50%)
-    text-transform: uppercase
-    white-space: nowrap
-    color: $white
-    font-size: 24px
-    font-weight: 700
+      &:hover
+        transition: color .35s ease-in-out
+        //sass-lint:disable-all
+        color: lighten($limegreen, 40)
+        // sass-lint:enable-all
+
+      @media screen and (max-height: 580px)
+        &:nth-child(4)
+          display: none
+
+      @media screen and (max-height: 520px)
+        &:nth-child(3),
+        &:nth-child(4)
+          display: none
+
+      @media screen and (max-height: 462px)
+        display: none
+
 
   &__social-links
+    // @extend .flex-container-lg
+    // @extend .flex
+    // @extend .flex-center
     position: absolute
-    top: 50%
-    right: 6%
-    transform: translateY(-50%)
+    top: 85%
+    right: 50%
+    left: 50%
+    flex-direction: row
+    justify-content: center
+    transform: translateX(-50%)
     transition: opacity .25s ease-in-out
     opacity: 0
+    margin: 0 auto
+    width: 100%
 
-
-    &--active
+    &.active
       transition: opacity .35s ease-in-out 1.2s
       opacity: 1
 
-  &__facebook,
-  &__instagram
+  &__social-link
+    // position: relative
+    transition: border .25s ease-in-out
+    margin-right: 1rem
+    border: 1px solid $white
+    border-radius: 50%
     width: 45px
     height: 45px
 
     svg
-      margin: 9px 0
-      width: 45px
-      height: 45px
+      transition: all .25s ease-in-out
       fill: $white
+
+    // &:hover
+    //   transition: border .25s ease-in-out
+    //   border: 1px solid $limegreen
+    //
+    //   svg
+    //     transition: all .25s ease-in-out
+    //     fill: $limegreen
+
+  &__phone
+    padding: 8px
+
+  &__mail
+    padding: 12px 6px
+
+  &__facebook
+    margin-left: -1px
+    padding: 6px 14px 9px
+    width: 45px
+    height: 45px
+
+  &__goog
+    padding: 9px 6px
+
+    svg
+      margin-left: 4px
+
+  &__ig
+    padding: 10px
+
+    .ig-phil
+      transition: fill .25s ease-in-out
+      fill: none
+      stroke: $limegreen
+      stroke-width: 3px
+
+    .ig-dot
+      fill: $limegreen
+
+    svg
+      transition: fill .25s ease-in-out
+      fill: $white
+
+    // &:hover
+    //
+    //   .ig-phil
+    //     transition: all .25s ease-in-out
+    //     fill: $limegreen
+    //
+    //   svg
+    //     transition: fill .25s ease-in-out
+    //     fill: $limegreen
+
+  &__appt
+    @include button-circle-phil(297px, $white, $white, .35s, 1px, $limegreen, 30px, 6px 0, 34px, -270px, -30px)
+    position: absolute
+    top: 100%
+    left: 50%
+    transform: translate(-50%, 100%)
+    transition: opacity .25s ease-in-out
+    opacity: 0
+    z-index: 11
+    max-height: 48px
+    pointer-events: none
+
+    span
+      letter-spacing: 2px
+      font-size: 16px
+      font-weight: 600
+
+    &-icon
+      // extended shadow transition to wait for circle to collapse
+      transition: all .55s ease-in-out
+      border-radius: 50%
+      box-shadow: 0 2px 4px 0 rgba($black, .33)
+
+      svg
+        .line
+          fill: $white
+
+    &:hover
+      // quickly remove box-shadow as bg expands
+      .menu__appt-icon
+        transition: box-shadow .15s ease-in-out
+        box-shadow: none
+
+    &:active
+      box-shadow: none
+
+    &--is-visible
+      transition: opacity .35s ease-in-out 1.3s
+      opacity: 1
+      pointer-events: auto
+
+    &--white
+      border: 1px solid $white
+
+      &:after
+        background: $limegreen
+
+      @media (hover: hover)
+        &:hover
+          border: 1px solid $limegreen
+
+      .menu__appt-icon
+        svg
+          fill: $limegreen
+
+  &__waypoint
+    position: absolute
+    top: 50vh

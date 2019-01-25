@@ -1,0 +1,66 @@
+.block-testimonials
+  position: relative
+
+  &__partial-background
+    position: absolute
+    bottom: 0
+    z-index: -1
+    background: $reviewgrey
+    width: 100%
+    height: 66%
+
+  &__container
+    margin: 0 auto
+    padding: 64px 30px
+    max-width: 1372px
+
+  &__title
+    @extend h1
+    text-align: center
+
+  &__testimonials
+    display: flex
+    justify-content: space-between
+    margin-top: 64px
+
+  &__testimonial
+    position: relative
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.17)
+    background: $white
+    padding: 48px 48px 60px 64px
+    width: calc(33.33% - 11px)
+
+    &:first-child
+      margin-right: 8px
+
+    &:nth-child(2)
+      margin: 0 8px
+
+    &:last-child
+      margin-left: 8px
+
+  &__quotes
+    position: absolute
+    top: 32px
+    left: calc(50% + 34px)
+
+    svg
+      width: 74px
+      height: 52px
+      fill: $forestgreen
+
+  &__image
+    @extend .image-norm
+    margin: 0 auto
+    margin-bottom: 21px
+    border-radius: 50%
+    width: 110px
+    height: 110px
+
+  &__review
+    margin-bottom: 16px
+    line-height: 1.5
+
+  &__name
+    text-align: center
+    font-weight: 700

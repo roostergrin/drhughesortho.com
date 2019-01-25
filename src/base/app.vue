@@ -3,6 +3,7 @@
 <script>
 import Navigation from 'components/navigation/navigation'
 import Header from 'components/header/header'
+import Footer from 'components/footer/footer'
 
 export default {
   async created () {
@@ -17,7 +18,8 @@ export default {
   },
   components: {
     Navigation,
-    Header
+    Header,
+    Footer
   }
 }
 </script>

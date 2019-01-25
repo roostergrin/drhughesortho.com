@@ -1,17 +1,40 @@
 .menu(v-if='props')
+  //- .menu__overlay
+  //-   transition(name='title-fade')
+  //-     .menu__title(
+  //-       v-if='!$store.state.menu && $route.path != "/"'
+  //-       :class='{"menu__title--white": $route.path === "/treatments" || $route.path === "/mattiacio-difference" }'
+  //-       ) {{ $route.name }}
+  //-   .menu__appt(:class='{"menu__appt--is-visible": !$store.state.menu && $route.path != "/contact-us" && $route.path != "/", "menu__appt--white": $route.name != "Treatments" }', @click='makeAppt')
+  //-     span Make an Appointment
+  //-     Icon.menu__appt-icon(name='arrow')  
   .menu__container
-    .menu__link-wrapper(v-for='(link, i) in links', :key='i', v-if='link.navigation', :style="styleObject", :class="{'not-active': $store.state.menu}")
-      // For Videos
-      .menu__link-container(v-if='link.video')
-        video.menu__link-video(:src='link.video' loop muted autoplay)
-        .menu__link-name(v-html='link.name')
+    .menu__link-wrapper(
+      v-for='(link, i) in links'
+      :key='i'
+      v-if='link.navigation'
+      :style="styleObject"
+      :class='{"active": $route.name  === link.name && !$store.state.menu, "menu__link-wrapper--current": $route.name === link.name, "not-active": $route.name  != link.name && $store.state.menu}'
+      )
+      .menu__link-container-video(v-if='link.video')
+        video.menu__link-video(loop muted autoplay)
+          source(:src='link.video' type='video/mp4')
+        .menu__link-overlay
+        .menu__link-expanded-overlay  
+        .menu__link(
+          v-on:click='closeMenu(link)') {{ link.name }}
       
-      //For Images
-      .menu__link-container(v-if='link.image', :style="{ backgroundImage: 'url(' + link.image + ') '}")
-        .menu__link-name(v-html='link.name')
+      .menu__link-container-image(
+        v-if='link.image'
+        :class='{"menu__link-container-image--disabled": !$store.state.menu}'
+        :style="{backgroundImage: 'url(' + link.image + ')'}"
+        ) 
+        .menu__link-overlay
+        .menu__link-expanded-overlay
+        .menu__link(
+          v-on:click='closeMenu(link)') {{ link.name }}
+        .menu__submenu(v-if='link.children')
           
-    .menu__social-links(:class="{ 'menu__social-links--active': $store.state.menu }")
-      a.menu__facebook(:href='props.acf.navigation.facebook', target='_blank')
-        Icon(name='Facebook')
-      a.menu__instagram(:href='props.acf.navigation.instagram', target='_blank')
-        Icon(name='Instagram')
+  .menu__waypoint-container
+    .menu__waypoint(v-waypoint="{ active: true, callback: onWaypoint }")
+              

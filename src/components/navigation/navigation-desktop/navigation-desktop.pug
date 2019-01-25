@@ -1,4 +1,4 @@
-.navigation-desktop(v-if='props')
+.navigation-desktop(v-if='props', :class="{'navigation-desktop__scroll': $store.state.nav }")
   .navigation-desktop__container
     .navigation-desktop__item
       a.navigation-desktop__phone(:href='props.acf.navigation.phone_link')

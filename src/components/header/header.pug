@@ -1,4 +1,2 @@
-#head.header
+#head.header(:class="{'header--video': $route.path === '/' || $route.path === '/first-visit' || this.$store.state.menu }")
   Menu
-  transition(name='home-fade')
-    HeroHome(v-show='!$store.state.menu')

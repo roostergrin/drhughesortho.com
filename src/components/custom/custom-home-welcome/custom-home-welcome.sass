@@ -1,0 +1,140 @@
+.custom-home-welcome
+
+  &__container
+    margin: 0 auto
+    padding: 64px 30px
+    max-width: 996px
+
+  &__title
+    @extend h1
+    margin-bottom: 24px
+    text-align: center
+
+  &__tagline
+    @extend h4
+    margin: 0 auto
+    margin-bottom: 48px
+    max-width: 710px
+    text-align: center
+    color: $deepseagreen
+
+  &__tiles
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+  &__tile
+    @extend .image-norm
+    display: inline-block
+    position: relative
+    margin-bottom: 24px
+
+    &:first-child
+      height: 468px
+
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4)
+      width: calc(33.33% - 12px)
+      height: 252px
+
+      .custom-home-welcome__name
+        margin-left: 0
+        text-align: center
+        letter-spacing: 0.5px
+        font-size: 24px
+
+    &:nth-child(5),
+    &:last-child
+      margin-bottom: 0
+      width: calc(50% - 10px)
+      height: 252px
+
+    &:hover
+      .custom-home-welcome__border-tile
+        opacity: 1
+
+      .custom-home-welcome__heart
+        opacity: 1
+
+      .custom-home-welcome__name
+        opacity: 0
+
+      .custom-home-welcome__content
+        transform: translateY(0)
+        opacity: 1
+
+  &__heart
+    position: absolute
+    right: 6px
+    bottom: 8px
+    transition: all 0.4s ease-in-out
+    opacity: 0
+
+    svg
+      width: 43px
+      fill: $white
+
+  &__overlay-tile
+    position: absolute
+    opacity: 0.45
+    background-image: linear-gradient(to bottom, rgba(82, 82, 82, 0), #000000)
+    width: 100%
+    height: 100%
+
+  &__border-tile
+    position: relative
+    transition: all 0.4s ease-in-out
+    opacity: 0
+    z-index: 5
+    margin-top: 15px
+    margin-left: 10px
+    border: 2px solid $white
+    width: calc(100% - 20px)
+    height: calc(100% - 30px)
+
+  &__name
+    position: absolute
+    bottom: 28px
+    transition: all 0.4s ease-in-out
+    margin-left: 38px
+    width: 100%
+    text-transform: uppercase
+    letter-spacing: 1px
+    color: $white
+    font-size: 30px
+    font-weight: 300
+
+  &__content
+    position: absolute
+    bottom: 28px
+    transform: translateY(10px)
+    transition: all 0.4s ease-in-out
+    opacity: 0
+    margin-left: 52px
+    width: 70%
+
+  &__text
+    margin-bottom: 12px
+    line-height: 24px
+    color: $white
+    font-size: 18px
+    font-weight: 300
+
+  &__learn-more
+    display: flex
+    color: $white
+    font-weight: 300
+
+    &--icon
+      width: 24px
+      height: 24px
+
+      svg
+        position: relative
+        right: 6px
+        bottom: 4px
+        margin-right: 6px
+        width: 24px
+        height: 24px
+        fill: $white

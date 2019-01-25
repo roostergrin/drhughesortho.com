@@ -1,4 +1,7 @@
 .pages-home 
   Loader(v-show='loading')
   div(v-if='props')
-    CustomHomeWelcome
+    CustomHomeWelcome(:props='props.custom_home_welcome')
+    BlockParallax(:props='props.block_parallax')
+    BlockTestimonials(:props='props.block_testimonials')
+    BlockGallery(:props='props.block_gallery')

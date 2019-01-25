@@ -19,9 +19,11 @@ export default {
         this.$store.state.menu ? document.body.classList.add('body-stop') : document.body.classList.remove('body-stop')
       }
       if (menuClosed) {
-        this.$scrollTo('#head', { offset: 0 })
-        this.$store.dispatch('VIEW_MENU', true)
-        this.$store.state.menu ? document.body.classList.add('body-stop') : document.body.classList.remove('body-stop')
+        this.$scrollTo('#head', { duration: 500 })
+        setTimeout(() => {
+          this.$store.dispatch('VIEW_MENU', true)
+          this.$store.state.menu ? document.body.classList.add('body-stop') : document.body.classList.remove('body-stop')
+        }, 400)
       }
     }
   }

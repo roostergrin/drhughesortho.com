@@ -1,0 +1,94 @@
+.custom-about-team
+
+  &__background
+    background: $teamgrey
+    padding: 64px 0
+
+  &__title
+    @extend h1
+    margin-bottom: 16px
+    text-align: center
+
+  &__tagline
+    margin: 0 auto
+    margin-bottom: 8px
+    max-width: 490px
+    line-height: 28px
+    color: $deepseagreen
+    font-size: 20px
+    font-weight: 700
+
+  &__content
+    margin: 0 auto
+    margin-bottom: 44px
+    max-width: 490px
+    line-height: 24px
+
+  &__full-member-container
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+  &__partial-member-container
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+
+    .custom-about-team__member
+      margin: 0 3px 6px
+
+  &__member
+    @extend .image-norm
+    position: relative
+    margin-bottom: 6px
+    width: calc(25% - 4.5px)
+    height: 325px
+
+    &:hover
+      .custom-about-team__overlay
+        bottom: 0
+        width: 100%
+        height: 100%
+
+      .custom-about-team__name
+        opacity: 0
+
+      .custom-about-team__position
+        opacity: 0
+
+      .custom-about-team__bio
+        opacity: 1
+
+  &__overlay
+    position: absolute
+    bottom: 18px
+    left: 0
+    transition: all 0.3s ease-in-out
+    background: rgba(255, 255, 255, 0.61)
+    padding: 12px 0 6px 42px
+    width: 85%
+    height: 67px
+
+  &__name
+    transition: all 0.3s ease-in-out
+    margin-bottom: 2px
+    color: $deepseagreen
+    font-size: 20px
+    font-weight: 700
+
+  &__position
+    transition: all 0.3s ease-in-out
+    color: $mineshaft
+
+  &__bio
+    display: flex
+    position: absolute
+    top: 0
+    left: 0
+    align-items: center
+    transition: all 0.3s ease-in-out
+    opacity: 0
+    padding: 30px
+    width: 100%
+    height: 100%
+    line-height: 1.5

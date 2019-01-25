@@ -2,6 +2,11 @@
 
 <script>
 import Loader from 'components/loader/loader'
+import BlockRows from 'components/block/block-rows/block-rows'
+import CustomTreatmentsBraces from 'components/custom/custom-treatments-braces/custom-treatments-braces'
+import CustomTreatmentsTech from 'components/custom/custom-treatments-tech/custom-treatments-tech'
+import BlockTestimonials from 'components/block/block-testimonials/block-testimonials'
+import BlockGallery from 'components/block/block-gallery/block-gallery'
 
 export default {
   computed: {
@@ -13,7 +18,12 @@ export default {
     }
   },
   components: {
-    Loader
+    Loader,
+    BlockRows,
+    CustomTreatmentsBraces,
+    CustomTreatmentsTech,
+    BlockTestimonials,
+    BlockGallery
   }
 }
 </script>
