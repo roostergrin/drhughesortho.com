@@ -69,10 +69,10 @@ function rg_serve_route_sponsorship () {
   $subject = 'API Contact Form';
   $headers = array('Content-Type: text/html; charset=UTF-8');
   $message = '<html><body>';
-  $message .= '<p><h4><strong>Form Submission by: </strong></h4>' . $data['firstname'] . '' . $data['lastname'] . '</p>';
+  $message .= '<p><h4><strong>Form Submission by: </strong></h4>' . $data['firstname'] . ' ' . $data['lastname'] . '</p>';
   $message .= '<p><h4><strong>Email Address: </strong></h4>' . $data['email'] . '</p>';
   $message .= '<p><h4><strong>Phone Number: </strong></h4>' . $data['phone'] . '</p>';
-  $message .= '<p><h4><strong>When is it best to call you back?</strong></h4>' . $data['day'] . '' . $data['time'] . '</p>';
+  $message .= '<p><h4><strong>When is it best to call you back?</strong></h4>' . $data['day'] . ' ' . $data['time'] . '</p>';
   $message .= '<p><h4><strong>Name of Organization: </strong></h4>' . $data['organization'] . '</p>';
   $message .= '<p><h4><strong>Name of Event: </strong></h4>' . $data['eventname'] . '</p>';
   $message .= '<p><h4><strong>Brief Description: </strong></h4>' . $data['description'] . '</p>';
