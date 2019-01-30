@@ -2,7 +2,8 @@
   .custom-treatments-braces__background
     .custom-treatments-braces__container
       .custom-treatments-braces__col
-        .custom-treatments-braces__image(:style="{ backgroundImage: 'url(' + props.image + ')'}")
+        .custom-treatments-braces__image-mask(v-waypoint='{ active: true, callback: onWaypointImage }', :class="{ 'custom-treatments-braces__image-mask--active': showImage }")
+          .custom-treatments-braces__image(:style="{ backgroundImage: 'url(' + props.image + ')'}", :class="{ 'custom-treatments-braces__image--active': showImage }")
       .custom-treatments-braces__col
         .custom-treatments-braces__title(v-html='props.title')
         .custom-treatments-braces__content(v-html='props.content')

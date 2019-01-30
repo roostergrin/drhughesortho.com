@@ -1,13 +1,10 @@
 .menu(v-if='props')
-  //- .menu__overlay
-  //-   transition(name='title-fade')
-  //-     .menu__title(
-  //-       v-if='!$store.state.menu && $route.path != "/"'
-  //-       :class='{"menu__title--white": $route.path === "/treatments" || $route.path === "/mattiacio-difference" }'
-  //-       ) {{ $route.name }}
-  //-   .menu__appt(:class='{"menu__appt--is-visible": !$store.state.menu && $route.path != "/contact-us" && $route.path != "/", "menu__appt--white": $route.name != "Treatments" }', @click='makeAppt')
-  //-     span Make an Appointment
-  //-     Icon.menu__appt-icon(name='arrow')  
+  .menu__overlay(:class="{ 'menu__overlay--short': $route.meta.short }")
+    transition(name='title-fade')
+      .menu__tag-box(v-if='!$store.state.menu')
+        .menu__tagline(v-html='$route.meta.tagline')
+        center
+          .menu__appointment(@click='requestAppointment', v-if='$route.meta.appointment') Request Appointment
   .menu__container
     .menu__link-wrapper(
       v-for='(link, i) in links'
@@ -23,6 +20,9 @@
         .menu__link-expanded-overlay  
         .menu__link(
           v-on:click='closeMenu(link)') {{ link.name }}
+        //- .menu__content-container
+        //-   .menu__tagline(v-html='link.tagline')
+        //-   .menu__appointment(@click='requestAppointment') Request Appointment
       
       .menu__link-container-image(
         v-if='link.image'

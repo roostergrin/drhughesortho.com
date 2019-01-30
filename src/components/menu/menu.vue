@@ -43,9 +43,6 @@ export default {
       this.styleWidth = e.target.innerWidth
       this.styleHeight = e.target.innerHeight
     },
-    makeAppt () {
-      this.$router.push('/contact-us#form')
-    },
     onWaypoint ({ going, direction }) {
       // going: in, out
       // direction: top, right, bottom, left
@@ -56,6 +53,13 @@ export default {
       if (going === this.$waypointMap.GOING_OUT) {
         this.$store.dispatch('VIEW_NAV', true)
       }
+    },
+    requestAppointment () {
+      this.$store.dispatch('VIEW_MENU', true)
+      setTimeout(() => {
+        this.$router.push('/contact')
+        this.$store.dispatch('VIEW_MENU', false)
+      }, 1300)
     }
   }
 }

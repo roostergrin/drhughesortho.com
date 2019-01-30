@@ -60,6 +60,26 @@
   &-leave-active
     opacity: 0
 
+.title-fade
+  backface-visibility: hidden
+
+  &-enter-active
+    transition-property: opacity, transform
+    transition-duration: .45s
+    transition-delay: .75s
+    transition-timing-function: ease-in-out
+
+  &-leave-active
+    transition-duration: .25s
+    transition-property: opacity
+
+  &-enter,
+  &-leave-active
+    opacity: 0
+
+  &-enter
+    transform: translate(0, 15%)
+
 // -------------------------------------
 // Slides
 // -------------------------------------

@@ -5,4 +5,5 @@
         .custom-treatments-tech__title(v-html='props.title')
         .custom-treatments-tech__content(v-html='props.content')
       .custom-treatments-tech__col
-        .custom-treatments-tech__image(:style="{ backgroundImage: 'url(' + props.image + ')'}")
+        .custom-treatments-tech__image-mask(v-waypoint='{ active: true, callback: onWaypointImage }', :class="{ 'custom-treatments-tech__image-mask--active': showImage }")
+          .custom-treatments-tech__image(:style="{ backgroundImage: 'url(' + props.image + ')'}", :class="{ 'custom-treatments-tech__image--active': showImage }")

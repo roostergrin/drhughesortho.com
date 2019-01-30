@@ -8,6 +8,14 @@
       transform: translate($translate-y-to, $translate-x-to)
       opacity: 1
 
+@keyframes fade-in-up
+  from
+    transform: translateY(5%)
+    opacity: 0
+  to
+    transform: translateY(0)
+    opacity: 1
+
 // --- Bounce Effects
 
 @keyframes funFaded
@@ -38,3 +46,19 @@
   100%
     transform: scaleX(1) scaleY(1)
     opacity: 1
+
+@keyframes slide-in
+  0%
+    transform: translateX(0%)
+  100%
+    transform: translateX(100%)
+
+@keyframes visible
+  0%
+    transform: translateX(-5%)
+    visibility: hidden
+  50%
+    visibility: visible
+  100%
+    transform: translateX(0)
+    visibility: visible

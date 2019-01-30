@@ -17,12 +17,40 @@
     // remove max-width to not break wrap at higher widths
     max-width: none
 
+  &__tagline
+    position: relative
+    margin-bottom: 32px
+    text-align: center
+    text-transform: uppercase
+    letter-spacing: 0
+    color: $white
+    font-size: 42px
+    font-weight: 700
+
+  &__appointment
+    display: inline-block
+    position: relative
+    border-radius: 1px
+    box-shadow: 0 3px 6px 0 rgba(35, 35, 35, 0.36)
+    background: $limegreen
+    padding: 18px
+    text-transform: uppercase
+    letter-spacing: 0.5px
+    color: $white
+    font-size: 16px
+
+    &:hover
+      cursor: pointer
+
   &__overlay
     position: absolute
     top: 50%
     left: 50%
     transform: translate(-50%, -50%)
     z-index: 10
+
+    &--short
+      top: 65%
 
   &__title
     // @extend h1
@@ -136,7 +164,7 @@
 
 
       &:nth-child(2)
-        transform: translate(0, 100%) matrix(4, 0, 0, 4, 0, 0)
+        transform: translate(0, 100%) matrix(3.999999, 0, 0, 3.999999, 0, 0)
 
 
       &:nth-child(3)
@@ -281,13 +309,12 @@
     //     fill: $limegreen
 
   &__appt
-    @include button-circle-phil(297px, $white, $white, .35s, 1px, $limegreen, 30px, 6px 0, 34px, -270px, -30px)
     position: absolute
     top: 100%
     left: 50%
     transform: translate(-50%, 100%)
     transition: opacity .25s ease-in-out
-    opacity: 0
+    opacity: 1
     z-index: 11
     max-height: 48px
     pointer-events: none

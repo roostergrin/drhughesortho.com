@@ -25,7 +25,7 @@ export default {
             this.onSubmit()
           }
           if (!result) {
-            setTimeout(() => { this.$scrollTo('#form-contact', { offset: -135 }) }, 300)
+            setTimeout(() => { this.$scrollTo('#form-contact', { offset: -86 }) }, 300)
           }
         })
         .catch((e) => {

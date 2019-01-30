@@ -14,19 +14,29 @@
     align-items: center
     justify-content: space-between
     margin: 0 auto
-    padding: 0 30px
+    padding: 12px 30px
     max-width: 1340px
 
   &__item
     display: flex
     align-items: center
     justify-content: center
+    transition: all 0.4s ease-in-out
 
     &:first-child
       justify-content: flex-start
 
+    &:nth-child(2)
+      position: absolute
+      top: 20px
+      left: calc(50% - 130px)
+
     &:last-child
       justify-content: flex-end
+
+    &--scroll
+      top: 14px !important
+      left: calc(50% - 80px) !important
 
   &__phone
     display: flex
@@ -48,8 +58,13 @@
 
   &__logo
     svg
+      transition: all 0.4s ease-in-out
       width: 260px
-      height: 100px
+      fill: $white
+
+    &--scroll
+      svg
+        width: 160px
 
   &__login-container
     display: flex
@@ -57,6 +72,9 @@
     justify-content: center
     border-right: 1px solid $white
     padding-right: 8px
+
+    &:hover
+      cursor: pointer
 
   &__login-icon
     margin-right: 5px
@@ -70,6 +88,7 @@
 
   &__login-text
     text-transform: uppercase
+    color: $white
 
   &__menu-container
     display: flex

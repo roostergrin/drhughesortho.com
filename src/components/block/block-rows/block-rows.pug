@@ -5,5 +5,6 @@
         .block-rows__col
           .block-rows__content(v-html='row.content')
         .block-rows__col
-          .block-rows__image(:style="{ backgroundImage: 'url(' + row.image + ') '}")
+          .block-rows__image-mask(v-waypoint='{ active: true, callback: onWaypointImage }')
+            .block-rows__image(:style="{ backgroundImage: 'url(' + row.image + ') '}")
           

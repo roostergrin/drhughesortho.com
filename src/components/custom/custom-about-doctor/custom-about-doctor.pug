@@ -12,4 +12,5 @@
             .custom-about-doctor__body(v-for='(body, k) in doctor.tabs', :key='k', :class="{ 'custom-about-doctor__body--active': i !== activeDoctor && k === 0 || k === activeTab && i === activeDoctor }", v-html='body.body')
           
       .custom-about-doctor__col
-        .custom-about-doctor__image(:style="{ backgroundImage: 'url(' + doctor.image + ')' }")
+        .custom-about-doctor__image-mask(v-waypoint='{ active: true, callback: onWaypointDoctors}')
+          .custom-about-doctor__image(:style="{ backgroundImage: 'url(' + doctor.image + ')' }")

@@ -25,6 +25,21 @@ export default {
           this.$store.state.menu ? document.body.classList.add('body-stop') : document.body.classList.remove('body-stop')
         }, 400)
       }
+    },
+    closeMenu () {
+      if (this.$store.state.menu) {
+        this.$store.dispatch('VIEW_MENU', false)
+        document.body.classList.remove('body-stop')
+        this.$router.push('/')
+      }
+      // scroll to top before fade
+      if (!this.$store.state.menu && this.$route.path !== '/') {
+        this.$store.dispatch('VIEW_MENU', true)
+        setTimeout(() => {
+          this.$router.push('/')
+          this.$store.dispatch('VIEW_MENU', false)
+        }, 1300)
+      }
     }
   }
 }

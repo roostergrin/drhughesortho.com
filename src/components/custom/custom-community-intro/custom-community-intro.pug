@@ -6,4 +6,5 @@
         .custom-community-intro__col
           .custom-community-intro__content(v-html='row.content')
         .custom-community-intro__col
-          .custom-community-intro__image(:style="{ backgroundImage: 'url(' + row.image + ') '}")
+          .custom-community-intro__image-mask(v-waypoint='{ active: true, callback: onWaypointImage }')
+            .custom-community-intro__image(:style="{ backgroundImage: 'url(' + row.image + ') '}")

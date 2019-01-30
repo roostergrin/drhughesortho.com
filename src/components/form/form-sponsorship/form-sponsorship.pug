@@ -11,22 +11,26 @@
         .form-sponsorship__group
           input.form-sponsorship__input(name='firstname', v-model='firstname', v-validate="'required|alpha_spaces'", :class="{ 'form-sponsorship__input--error': errors.has('firstname') }", type='text', placeholder='First Name')
           .form-sponsorship__message
-            span(v-show="errors.has('firstname')") Your first name is required.
+            transition(name='fade')
+              span(v-show="errors.has('firstname')") Your first name is required.
             
         .form-sponsorship__group
           input.form-sponsorship__input(name='lastname', v-model='lastname', v-validate="'required|alpha_spaces'", :class="{ 'form-sponsorship__input--error': errors.has('lastname') }", type='text', placeholder='Last Name')
           .form-sponsorship__message
-            span(v-show="errors.has('lastname')") Your last name is required.
+            transition(name='fade')
+              span(v-show="errors.has('lastname')") Your last name is required.
             
         .form-sponsorship__group
           input.form-sponsorship__input(name='email', v-model='email', v-validate="'required|email'", :class="{ 'form-sponsorship__input--error': errors.has('email') }", type='text', placeholder='Email Address')
           .form-sponsorship__message
-            span(v-show="errors.has('email')") Valid email required.
+            transition(name='fade')
+              span(v-show="errors.has('email')") Valid email required.
             
         .form-sponsorship__group
           input.form-sponsorship__input(name='phone', v-model='phone', v-validate="'required|numeric'", :class="{ 'form-sponsorship__input--error': errors.has('phone') }", type='text', placeholder='Phone Number')
           .form-sponsorship__message
-            span(v-show="errors.has('phone')") Numeric values only.
+            transition(name='fade')
+              span(v-show="errors.has('phone')") Numeric values only.
             
         .form-sponsorship__group
           .form-sponsorship__checkbox-label When is it best to call you back?

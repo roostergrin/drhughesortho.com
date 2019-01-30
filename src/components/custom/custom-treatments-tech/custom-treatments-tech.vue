@@ -3,6 +3,19 @@
 <script>
 
 export default {
-  props: ['props']
+  data () {
+    return {
+      showImage: false
+    }
+  },
+  props: ['props'],
+  methods: {
+    onWaypointImage ({ going, direction }) {
+      if (going === this.$waypointMap.GOING_IN) {
+        this.showImage = true
+      }
+    }
+  }
+
 }
 </script>

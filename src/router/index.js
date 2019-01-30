@@ -21,42 +21,70 @@ const router = new VueRouter({
       name: 'Home',
       navigation: true,
       component: Home,
-      video: '/static/HomeVideo.mp4'
+      video: '/static/HomeVideo.mp4',
+      meta: {
+        tagline: 'Smiles, Inside and Out ',
+        short: false,
+        appointment: true
+      }
     },
     {
       path: '/about-us',
       name: 'About Us',
       navigation: true,
       component: AboutUs,
-      image: '/static/AboutHero.jpg'
+      image: '/static/AboutHero.jpg',
+      meta: {
+        tagline: 'About Us',
+        short: true
+      }
     },
     {
       path: '/first-visit',
       name: 'First Visit',
       navigation: true,
       component: FirstVisit,
-      video: '/static/FirstVisitVideo.mp4'
+      video: '/static/FirstVisitVideo.mp4',
+      meta: {
+        tagline: 'New Patients',
+        short: false,
+        appointment: true
+      }
     },
     {
       path: '/treatments',
       name: 'Treatments',
       navigation: true,
       component: Treatments,
-      image: '/static/TreatmentsHero.jpg'
+      image: '/static/TreatmentsHero.jpg',
+      meta: {
+        tagline: 'Treatments',
+        short: true,
+        appointment: true
+      }
     },
     {
       path: '/community',
       name: 'Our Community',
       navigation: true,
       component: Community,
-      image: '/static/OurCommunityHero.jpg'
+      image: '/static/OurCommunityHero.jpg',
+      meta: {
+        tagline: 'Our Community',
+        short: true,
+        appointment: true
+      }
     },
     {
       path: '/contact',
       name: 'Contact',
       navigation: true,
       component: Contact,
-      image: '/static/ContactHero.jpg'
+      image: '/static/ContactHero.jpg',
+      meta: {
+        tagline: 'Contact',
+        short: true
+      }
     },
     {
       path: '/styleguide',
