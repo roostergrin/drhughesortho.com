@@ -20,9 +20,6 @@
         .menu__link-expanded-overlay  
         .menu__link(
           v-on:click='closeMenu(link)') {{ link.name }}
-        //- .menu__content-container
-        //-   .menu__tagline(v-html='link.tagline')
-        //-   .menu__appointment(@click='requestAppointment') Request Appointment
       
       .menu__link-container-image(
         v-if='link.image'
@@ -37,4 +34,9 @@
           
   .menu__waypoint-container
     .menu__waypoint(v-waypoint="{ active: true, callback: onWaypoint }")
+  .menu__social-links
+    a.menu__facebook(:href='props.acf.navigation.facebook', target='_blank')
+      Icon(name='Facebook')
+    a.menu__instagram(:href='props.acf.navigation.instagram', target='_blank')
+      Icon(name='Instagram')
               

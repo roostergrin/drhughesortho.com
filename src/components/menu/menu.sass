@@ -1,4 +1,5 @@
 .menu
+  position: relative
   width: 100%
   height: 100%
 
@@ -224,79 +225,24 @@
 
 
   &__social-links
-    // @extend .flex-container-lg
-    // @extend .flex
-    // @extend .flex-center
     position: absolute
-    top: 85%
-    right: 50%
-    left: 50%
-    flex-direction: row
-    justify-content: center
-    transform: translateX(-50%)
-    transition: opacity .25s ease-in-out
-    opacity: 0
-    margin: 0 auto
-    width: 100%
+    top: 50%
+    right: 8%
+    transform: translateY(-50%)
 
-    &.active
-      transition: opacity .35s ease-in-out 1.2s
-      opacity: 1
-
-  &__social-link
-    // position: relative
-    transition: border .25s ease-in-out
-    margin-right: 1rem
-    border: 1px solid $white
-    border-radius: 50%
-    width: 45px
-    height: 45px
-
+  &__facebook,
+  &__instagram
+    display: block
+    margin: 9px 0
     svg
-      transition: all .25s ease-in-out
-      fill: $white
-
-    // &:hover
-    //   transition: border .25s ease-in-out
-    //   border: 1px solid $limegreen
-    //
-    //   svg
-    //     transition: all .25s ease-in-out
-    //     fill: $limegreen
+      width: 45px
+      fill: $teamgrey
 
   &__phone
     padding: 8px
 
   &__mail
     padding: 12px 6px
-
-  &__facebook
-    margin-left: -1px
-    padding: 6px 14px 9px
-    width: 45px
-    height: 45px
-
-  &__goog
-    padding: 9px 6px
-
-    svg
-      margin-left: 4px
-
-  &__ig
-    padding: 10px
-
-    .ig-phil
-      transition: fill .25s ease-in-out
-      fill: none
-      stroke: $limegreen
-      stroke-width: 3px
-
-    .ig-dot
-      fill: $limegreen
-
-    svg
-      transition: fill .25s ease-in-out
-      fill: $white
 
     // &:hover
     //
