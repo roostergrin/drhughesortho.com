@@ -34,9 +34,10 @@
           
   .menu__waypoint-container
     .menu__waypoint(v-waypoint="{ active: true, callback: onWaypoint }")
-  .menu__social-links
-    a.menu__facebook(:href='props.acf.navigation.facebook', target='_blank')
-      Icon(name='Facebook')
-    a.menu__instagram(:href='props.acf.navigation.instagram', target='_blank')
-      Icon(name='Instagram')
+  transition(name='social-fade')
+    .menu__social-links(v-if='$store.state.menu')
+      a.menu__facebook(:href='props.acf.navigation.facebook', target='_blank')
+        Icon(name='Facebook')
+      a.menu__instagram(:href='props.acf.navigation.instagram', target='_blank')
+        Icon(name='Instagram')
               
