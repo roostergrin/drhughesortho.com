@@ -1,0 +1,37 @@
+.navigation-mobile(v-if='props', :class='{"navigation-mobile--scrolling": $store.state.nav}')
+  .navigation-mobile__container
+    .navigation-mobile__item
+      router-link.navigation-mobile__logo-container(to='/', @click='$store.state.menu = false')
+        Icon.navigation-mobile__logo(name='LogoWhite')
+  
+    .navigation-mobile__item
+      .navigation-mobile__menu-container(@click='toggleMenu')
+        .navigation-mobile__hamburger(:class="{ 'navigation-mobile__hamburger--active': showMenu}")
+          span
+          span
+          span
+          span
+            
+    transition.navigation-mobile__drawer-transition(name='fade-menu')
+      .navigation-mobile__drawer(v-show='showMenu', @click='toggleMenu', :class="{'navigation-mobile__drawer--inactive': !showMenu}")
+        .navigation-mobile__drawer-container
+          .navigation-mobile__links
+            span.navigation-mobile__link(v-for='nav in links', v-if='nav.navigation || nav.mobile')
+              router-link(:to='nav.path')
+                | {{ nav.name }}
+          .navigation-mobile__bottom
+            .navigation-mobile__button-group
+              a.navigation-mobile__address(:href='props.acf.navigation.address_link')
+                .navigation-mobile__address--icon
+                  Icon(name='Location')
+                .navigation-mobile__address--text(v-html='props.acf.navigation.address')
+              a.navigation-mobile__phone(:href='props.acf.navigation.phone_link')
+                .navigation-mobile__phone--icon
+                  Icon(name='Phone')
+                .navigation-mobile__phone--text(v-html='props.acf.navigation.phone')
+            .navigation-mobile__social
+              Icon.navigation-mobile__facebook(name='Facebook')
+              Icon.navigation-mobile__instagram(name='Instagram')
+              
+                  
+              

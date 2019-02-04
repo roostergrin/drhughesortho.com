@@ -12,8 +12,8 @@ export default {
         this.$store.dispatch('VIEW_MENU', false)
       }, 1300)
       setTimeout(() => {
-        this.$scrollTo(scroll, { offset: -180 })
-      }, 1800)
+        this.$scrollTo(scroll, { offset: -86 })
+      }, 2100)
     }
   }
 }

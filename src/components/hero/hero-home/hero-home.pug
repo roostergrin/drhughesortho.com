@@ -1,0 +1,9 @@
+.hero-home
+  .hero-home__waypoint(v-waypoint="{ active: true, callback: onWaypoint }")
+  .hero-home__container
+    video.hero-home__hero(loop muted autoplay)
+      source(src='/static/HomeVideo.mp4' type='video/mp4')
+    .hero-home__tag-box
+      .hero-home__tagline Smiles, Inside and Out
+      center
+        router-link.hero-home__appointment(to='/contact') Request Appointment

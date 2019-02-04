@@ -44,8 +44,6 @@ export default {
       this.styleHeight = e.target.innerHeight
     },
     onWaypoint ({ going, direction }) {
-      // going: in, out
-      // direction: top, right, bottom, left
       if (going === this.$waypointMap.GOING_IN) {
         this.$store.dispatch('VIEW_NAV', false)
       }
