@@ -43,15 +43,6 @@ export default {
       this.styleWidth = e.target.innerWidth
       this.styleHeight = e.target.innerHeight
     },
-    onWaypoint ({ going, direction }) {
-      if (going === this.$waypointMap.GOING_IN) {
-        this.$store.dispatch('VIEW_NAV', false)
-      }
-
-      if (going === this.$waypointMap.GOING_OUT) {
-        this.$store.dispatch('VIEW_NAV', true)
-      }
-    },
     requestAppointment () {
       this.$store.dispatch('VIEW_MENU', true)
       setTimeout(() => {

@@ -24,13 +24,15 @@
     text-align: center
     text-transform: uppercase
     letter-spacing: 0
+    white-space: nowrap
     color: $white
-    font-size: 42px
+    font-size: 62px
     font-weight: 700
 
   &__appointment
     display: inline-block
     position: relative
+    transition: all 0.4s ease-in-out
     border-radius: 1px
     box-shadow: 0 3px 6px 0 rgba(35, 35, 35, 0.36)
     background: $limegreen
@@ -41,6 +43,7 @@
     font-size: 16px
 
     &:hover
+      background: $forestgreen
       cursor: pointer
 
   &__overlay
@@ -85,6 +88,14 @@
     .menu__link-wrapper--current &
       opacity: 1
 
+    &:hover
+      cursor: pointer
+
+      .menu__link
+        //sass-lint:disable-all
+        color: lighten($limegreen, 40)
+        // sass-lint:enable-all
+
   &__link-overlay
     position: absolute
     top: 0
@@ -106,10 +117,10 @@
     padding-top: .8rem
     padding-bottom: 6px
     text-transform: uppercase
-    letter-spacing: .864px
+    letter-spacing: 2px
     white-space: nowrap
     color: $white
-    font-size: 20px
+    font-size: 24px
     font-weight: 600
 
     &:hover
@@ -235,8 +246,12 @@
     display: block
     margin: 9px 0
     svg
+      transition: all 0.4s ease-in-out
       width: 45px
       fill: $teamgrey
+
+      &:hover
+        fill: $deepseagreen
 
   &__phone
     padding: 8px

@@ -1,0 +1,8 @@
+.hero-first-visit
+  .hero-first-visit__container
+    video.hero-first-visit__hero(loop muted autoplay)
+      source(src='/static/FirstVisitVideo.mp4' type='video/mp4')
+    .hero-first-visit__tag-box
+      .hero-first-visit__tagline New Patients
+      center
+        router-link.hero-first-visit__appointment(to='/contact') Request Appointment

@@ -17,6 +17,7 @@
     height: 43px
 
     svg
+      transition: all 0.4s ease-in-out
       width: 43px
       height: 43px
       fill: $gullgray
@@ -24,11 +25,23 @@
     &:hover
       cursor: pointer
 
+      svg
+        fill: #7b8795
+
     &:focus
       outline: none
+
+    @media(max-width: $screen-sm)
+      z-index: 5
 
   &__prev-arrow
     left: 0
 
+    @media(max-width: $screen-sm)
+      left: 15px
+
   &__next-arrow
     right: 0
+
+    @media(max-width: $screen-sm)
+      right: 15px

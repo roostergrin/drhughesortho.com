@@ -1,14 +1,22 @@
-.hero-home
+.hero-treatments
   display: none
 
   @media(max-width: $screen-sm)
     display: block
 
-  &__container
-    position: relative
-
   &__hero
+    @extend .image-norm
+    position: relative
     width: 100%
+    height: 360px
+
+  &__title
+    position: absolute
+    top: 55%
+    left: 50%
+    transform: translateX(-50%)
+    color: $white
+    font-size: 42px
 
   &__tag-box
     position: absolute

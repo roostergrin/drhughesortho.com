@@ -41,7 +41,7 @@ const router = new VueRouter({
     },
     {
       path: '/first-visit',
-      name: 'First Visit',
+      name: 'New Patients',
       navigation: true,
       component: FirstVisit,
       video: '/static/FirstVisitVideo.mp4',

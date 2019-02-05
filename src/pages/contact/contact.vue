@@ -2,6 +2,7 @@
 
 <script>
 import Loader from 'components/loader/loader'
+import HeroContact from 'components/hero/hero-contact/hero-contact'
 import FormContact from 'components/form/form-contact/form-contact'
 
 export default {
@@ -15,6 +16,7 @@ export default {
   },
   components: {
     Loader,
+    HeroContact,
     FormContact
   }
 }

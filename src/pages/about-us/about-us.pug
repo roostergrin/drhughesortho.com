@@ -1,6 +1,7 @@
 .pages-about-us 
   Loader(v-show='loading')
   div(v-if='props')
+    HeroAbout
     CustomAboutDoctor(:props='props.custom_about_doctor')
     CustomAboutTeam(:props='props.custom_about_team')
     CustomAboutOffice(:props='props.custom_about_office')

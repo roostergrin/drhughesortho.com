@@ -4,7 +4,11 @@
   z-index: 99
   padding: 1rem 0
   width: 100%
+  height: 120px
   color: $white
+
+  &--scrolling
+    background: $gullgray
 
   &__container
     padding: 0 30px
@@ -14,11 +18,17 @@
     top: 30px
     left: 50%
     transform: translateX(-50%)
-    transition: transform .35s ease-in-out
+    transition: all .35s ease-in-out
     z-index: 2
+
     svg
+      transition: all .35s ease-in-out
       width: 240px
       fill: $white
+
+    &--shrink
+      svg
+        width: 180px
 
   &__hamburger
     @include hamburger-basic($white, .25s, 40px, 24px)

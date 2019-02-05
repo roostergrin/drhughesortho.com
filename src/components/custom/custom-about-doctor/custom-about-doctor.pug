@@ -7,7 +7,10 @@
         .custom-about-doctor__bio(v-html='doctor.bio')
         .custom-about-doctor__tab-container
           .custom-about-doctor__labels
-            .custom-about-doctor__label(v-for='(label, j) in doctor.tabs', :key='j', :class="{ 'custom-about-doctor__label--active': i !== activeDoctor && j === 0 || j === activeTab && i === activeDoctor }", v-html='label.label', @click='setActive(i, j)')
+            .custom-about-doctor__label(v-for='(label, j) in doctor.tabs', :key='j', :class="{ 'custom-about-doctor__label--active': i !== activeDoctor && j === 0 || j === activeTab && i === activeDoctor }", @click='setActive(i, j)')
+              span(v-html='label.label')
+              .custom-about-doctor__label-cover
+              
           .custom-about-doctor__tabs
             .custom-about-doctor__body(v-for='(body, k) in doctor.tabs', :key='k', :class="{ 'custom-about-doctor__body--active': i !== activeDoctor && k === 0 || k === activeTab && i === activeDoctor }", v-html='body.body')
           

@@ -17,9 +17,8 @@
         video.menu__link-video(loop muted autoplay)
           source(:src='link.video' type='video/mp4')
         .menu__link-overlay
-        .menu__link-expanded-overlay  
-        .menu__link(
-          v-on:click='closeMenu(link)') {{ link.name }}
+        .menu__link-expanded-overlay(@click='closeMenu(link)')
+        .menu__link(@click='closeMenu(link)') {{ link.name }}
       
       .menu__link-container-image(
         v-if='link.image'
@@ -27,13 +26,12 @@
         :style="{backgroundImage: 'url(' + link.image + ')'}"
         ) 
         .menu__link-overlay
-        .menu__link-expanded-overlay
-        .menu__link(
-          v-on:click='closeMenu(link)') {{ link.name }}
+        .menu__link-expanded-overlay(@click='closeMenu(link)')
+        .menu__link(@click='closeMenu(link)') {{ link.name }}
         .menu__submenu(v-if='link.children')
           
-  .menu__waypoint-container
-    .menu__waypoint(v-waypoint="{ active: true, callback: onWaypoint }")
+  //- .menu__waypoint-container
+  //-   .menu__waypoint(v-waypoint="{ active: true, callback: onWaypoint }")
   transition(name='social-fade')
     .menu__social-links(v-if='$store.state.menu')
       a.menu__facebook(:href='props.acf.navigation.facebook', target='_blank')

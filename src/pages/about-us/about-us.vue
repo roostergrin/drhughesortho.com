@@ -2,6 +2,7 @@
 
 <script>
 import Loader from 'components/loader/loader'
+import HeroAbout from 'components/hero/hero-about/hero-about'
 import CustomAboutDoctor from 'components/custom/custom-about-doctor/custom-about-doctor'
 import CustomAboutTeam from 'components/custom/custom-about-team/custom-about-team'
 import CustomAboutOffice from 'components/custom/custom-about-office/custom-about-office'
@@ -18,6 +19,7 @@ export default {
   },
   components: {
     Loader,
+    HeroAbout,
     CustomAboutDoctor,
     CustomAboutTeam,
     CustomAboutOffice,

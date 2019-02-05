@@ -1,6 +1,7 @@
 .pages-treatments
   Loader(v-show='loading')
   div(v-if='props')
+    HeroTreatments
     BlockRows(:props='props.block_rows')
     CustomTreatmentsBraces(:props='props.custom_treatments_braces')
     CustomTreatmentsTech(:props='props.custom_treatments_tech')

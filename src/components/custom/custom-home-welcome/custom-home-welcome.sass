@@ -1,5 +1,15 @@
 .custom-home-welcome
 
+  &__desktop
+    @media(max-width: $screen-sm)
+      display: none
+
+  &__mobile
+    display: none
+
+    @media(max-width: $screen-sm)
+      display: block
+
   &__container
     margin: 0 auto
     padding: 64px 30px
@@ -44,11 +54,17 @@
         letter-spacing: 0.5px
         font-size: 24px
 
+        @media(max-width: $screen-sm)
+          font-size: 20px
+
     &:nth-child(5),
     &:last-child
       margin-bottom: 0
       width: calc(50% - 10px)
       height: 252px
+
+    &:last-child
+      background-position: right
 
     &:hover
       cursor: pointer
@@ -110,6 +126,10 @@
     color: $white
     font-size: 30px
     font-weight: 300
+
+    @media(max-width: $screen-sm)
+      width: 95%
+      font-size: 20px
 
   &__content
     position: absolute

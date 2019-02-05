@@ -2,6 +2,7 @@
 
 <script>
 import Loader from 'components/loader/loader'
+import HeroTreatments from 'components/hero/hero-treatments/hero-treatments'
 import BlockRows from 'components/block/block-rows/block-rows'
 import CustomTreatmentsBraces from 'components/custom/custom-treatments-braces/custom-treatments-braces'
 import CustomTreatmentsTech from 'components/custom/custom-treatments-tech/custom-treatments-tech'
@@ -19,6 +20,7 @@ export default {
   },
   components: {
     Loader,
+    HeroTreatments,
     BlockRows,
     CustomTreatmentsBraces,
     CustomTreatmentsTech,

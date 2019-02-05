@@ -1,4 +1,4 @@
-<template lang="pug" src="./hero-home.pug"></template>
+<template lang="pug" src="./hero-contact.pug"></template>
 
 <script>
 

@@ -2,7 +2,7 @@
   .navigation-mobile__container
     .navigation-mobile__item
       router-link.navigation-mobile__logo-container(to='/', @click='$store.state.menu = false')
-        Icon.navigation-mobile__logo(name='LogoWhite')
+        Icon.navigation-mobile__logo(name='LogoWhite', :class="{ 'navigation-mobile__logo--shrink': $store.state.nav }")
   
     .navigation-mobile__item
       .navigation-mobile__menu-container(@click='toggleMenu')

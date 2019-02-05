@@ -1,15 +1,32 @@
 .custom-home-welcome
-  .custom-home-welcome__container
-    .custom-home-welcome__title(v-html='props.title')
-    .custom-home-welcome__tagline(v-html='props.tagline')
-    .custom-home-welcome__tiles
-      .custom-home-welcome__tile(v-for='(tile, i) in props.tiles', :style="{ backgroundImage: 'url(' + tile.background + ')'}", v-scroll-to='{el: "#head", container: "body", duration: 750, easing: "ease-in-out", x: false, y: true}', @click='learnMore(tile.link, tile.scroll)')
-        .custom-home-welcome__overlay-tile
-        .custom-home-welcome__border-tile
-        Icon.custom-home-welcome__heart(name='Heart')
-        .custom-home-welcome__name(v-html='tile.name')
-        .custom-home-welcome__content
-          .custom-home-welcome__text(v-html='tile.text')
-          .custom-home-welcome__learn-more
-            Icon.custom-home-welcome__learn-more--icon(name='Triangle')
-            .custom-home-welcome__learn-more--text Learn More
+  .custom-home-welcome__desktop
+    .custom-home-welcome__container
+      .custom-home-welcome__title(v-html='props.title')
+      .custom-home-welcome__tagline(v-html='props.tagline')
+      .custom-home-welcome__tiles
+        .custom-home-welcome__tile(v-for='(tile, i) in props.tiles', :style="{ backgroundImage: 'url(' + tile.background + ')'}", v-scroll-to='{el: "#head", container: "body", duration: 750, easing: "ease-in-out", x: false, y: true}', @click='learnMore(tile.link, tile.scroll)')
+          .custom-home-welcome__overlay-tile
+          .custom-home-welcome__border-tile
+          Icon.custom-home-welcome__heart(name='Heart')
+          .custom-home-welcome__name(v-html='tile.name')
+          .custom-home-welcome__content
+            .custom-home-welcome__text(v-html='tile.text')
+            .custom-home-welcome__learn-more
+              Icon.custom-home-welcome__learn-more--icon(name='Triangle')
+              .custom-home-welcome__learn-more--text Learn More
+              
+  .custom-home-welcome__mobile
+    .custom-home-welcome__container
+      .custom-home-welcome__title(v-html='props.title')
+      .custom-home-welcome__tagline(v-html='props.tagline')
+      .custom-home-welcome__tiles
+        .custom-home-welcome__tile(v-for='(tile, j) in props.tiles', :style="{ backgroundImage: 'url(' + tile.background + ')'}", @click='learnMoreMobile(tile.link, tile.scroll)')
+          .custom-home-welcome__overlay-tile
+          .custom-home-welcome__border-tile
+          Icon.custom-home-welcome__heart(name='Heart')
+          .custom-home-welcome__name(v-html='tile.name')
+          .custom-home-welcome__content
+            .custom-home-welcome__text(v-html='tile.text')
+            .custom-home-welcome__learn-more
+              Icon.custom-home-welcome__learn-more--icon(name='Triangle')
+              .custom-home-welcome__learn-more--text Learn More
