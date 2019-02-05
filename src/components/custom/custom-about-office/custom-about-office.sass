@@ -5,7 +5,14 @@
     padding-bottom: 16px
     max-width: 1028px
 
+    @media(max-width: $screen-xs)
+      padding-top: 48px
+      padding-bottom: 0
+
   &__title
     @extend h1
     padding-bottom: 48px
     text-align: center
+
+    @media(max-width: $screen-xs)
+      padding-bottom: 32px

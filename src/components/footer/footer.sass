@@ -10,6 +10,9 @@
     margin: 0 auto
     max-width: 858px
 
+    @media(max-width: $screen-xs)
+      display: block
+
   &__social
 
     &--text
@@ -18,8 +21,14 @@
       font-size: 15px
       font-weight: 700
 
+      @media(max-width: $screen-xs)
+        text-align: center
+
     &--logos
       display: flex
+
+      @media(max-width: $screen-xs)
+        justify-content: center
 
     &--facebook,
     &--instagram
@@ -36,8 +45,17 @@
         &:hover
           fill: $gullgray
 
+      @media(max-width: $screen-xs)
+        margin: 0 8px
+
   &__info
     position: relative
+
+    @media(max-width: $screen-xs)
+      display: inline-block
+      left: calc(50% - 91px)
+      margin-top: 32px
+      margin-bottom: 32px
 
   &__location,
   &__phone
@@ -77,6 +95,10 @@
     background: $reviewgrey
     width: 1px
     height: 106px
+
+  &__credit
+    @media(max-width: $screen-xs)
+      text-align: center
 
   &__referral
     display: inline-flex

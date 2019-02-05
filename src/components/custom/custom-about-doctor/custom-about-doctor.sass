@@ -5,6 +5,9 @@
     padding: 96px 30px
     max-width: 1160px
 
+    @media(max-width: $screen-xs)
+      padding: 32px 30px
+
   &__doctor
     display: flex
     justify-content: space-between
@@ -13,15 +16,28 @@
     &:nth-child(even)
       flex-direction: row-reverse
 
+      @media(max-width: $screen-xs)
+        flex-direction: column-reverse
+
     &:last-child
       margin-bottom: 0
+
+    @media(max-width: $screen-xs)
+      flex-direction: column-reverse
 
   &__col
     &:first-child
       width: 54%
 
+      @media(max-width: $screen-xs)
+        width: 100%
+
     &:last-child
       width: 41%
+
+      @media(max-width: $screen-xs)
+        margin-bottom: 24px
+        width: 100%
 
   &__title
     @extend h1
@@ -36,8 +52,14 @@
     margin-bottom: 32px
     line-height: 1.5
 
+    @media(max-width: $screen-xs)
+      margin-bottom: 16px
+
   &__tab-container
     min-height: 200px
+
+    @media(max-width: $screen-xs)
+      min-height: 360px
 
   &__labels
     display: flex
@@ -110,6 +132,12 @@
       &:before
         animation: slide-in 1s cubic-bezier(.39, .575, .28, .995) forwards
 
+    @media(max-width: $screen-sm)
+      height: 440px
+
+    @media(max-width: $screen-xs)
+      height: 300px
+
   &__image
     position: absolute
     transform: translateX(-5%)
@@ -127,3 +155,7 @@
 
     @media(max-width: $screen-sm)
       height: 440px
+
+    @media(max-width: $screen-xs)
+      background-position: top
+      height: 300px

@@ -15,6 +15,9 @@
     padding: 64px 30px
     max-width: 996px
 
+    @media(max-width: $screen-xs)
+      padding: 32px 30px
+
   &__title
     @extend h1
     margin-bottom: 24px
@@ -27,6 +30,9 @@
     max-width: 710px
     text-align: center
     color: $deepseagreen
+
+    @media(max-width: $screen-xs)
+      margin-bottom: 24px
 
   &__tiles
     display: flex
@@ -41,6 +47,9 @@
 
     &:first-child
       height: 468px
+
+      @media(max-width: $screen-xs)
+        height: 280px
 
     &:nth-child(2),
     &:nth-child(3),
@@ -57,14 +66,25 @@
         @media(max-width: $screen-sm)
           font-size: 20px
 
+      @media(max-width: $screen-xs)
+        width: 100%
+        height: 280px
+
     &:nth-child(5),
     &:last-child
       margin-bottom: 0
       width: calc(50% - 10px)
       height: 252px
 
+      @media(max-width: $screen-xs)
+        width: 100%
+        height: 280px
+
     &:last-child
       background-position: right
+
+      @media(max-width: $screen-xs)
+        margin-top: 25px
 
     &:hover
       cursor: pointer

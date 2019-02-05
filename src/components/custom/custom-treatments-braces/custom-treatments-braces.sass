@@ -10,8 +10,14 @@
     padding: 42px 30px 30px
     max-width: 1190px
 
+    @media(max-width: $screen-xs)
+      flex-direction: column-reverse
+
   &__col
     width: calc(50% - 12px)
+
+    @media(max-width: $screen-xs)
+      width: 100%
 
   &__image-mask
     position: relative
@@ -33,6 +39,9 @@
       &:before
         animation: slide-in 1s cubic-bezier(.39, .575, .28, .995) forwards
 
+    @media(max-width: $screen-xs)
+      height: 200px
+
   &__image
     position: absolute
     transform: translateX(-5%)
@@ -48,11 +57,21 @@
       animation-delay: .25s
       visibility: visible
 
+    @media(max-width: $screen-xs)
+      height: 200px
+
   &__title
     @extend h1
     margin-bottom: 20px
     padding-left: 32px
 
+    @media(max-width: $screen-xs)
+      padding-left: 0
+
   &__content
     padding-left: 32px
     line-height: 24px
+
+    @media(max-width: $screen-xs)
+      margin-bottom: 32px
+      padding-left: 0

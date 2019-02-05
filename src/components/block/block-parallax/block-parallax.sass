@@ -9,6 +9,9 @@
     justify-content: center
     height: 360px
 
+    @media(max-width: $screen-xs)
+      height: 280px
+
   &__tagline
     @include fade-in-up(0.8s)
     max-width: 778px
@@ -21,6 +24,9 @@
 
     @media(max-width: $screen-sm)
       padding: 0 30px
+
+    @media(max-width: $screen-xs)
+      font-size: 24px
 
   &__waypoint
     position: absolute

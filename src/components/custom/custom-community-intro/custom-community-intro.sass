@@ -8,10 +8,16 @@
     padding: 48px 30px 64px
     max-width: 1190px
 
+    @media(max-width: $screen-xs)
+      padding-bottom: 0
+
   &__title
     @extend h1
     margin-bottom: 64px
     text-align: center
+
+    @media(max-width: $screen-xs)
+      margin-bottom: 32px
 
   &__row
     display: flex
@@ -44,6 +50,9 @@
       margin-top: 32px
       margin-bottom: 32px
 
+    @media(max-width: $screen-xs)
+      padding: 0
+
   &__image-mask
     position: relative
     height: 346px
@@ -67,6 +76,9 @@
     @media(max-width: $screen-sm)
       height: 445px
 
+    @media(max-width: $screen-xs)
+      height: 200px
+
   &__image
     position: absolute
     transform: translateX(-5%)
@@ -84,3 +96,6 @@
 
     @media(max-width: $screen-sm)
       height: 445px
+
+    @media(max-width: $screen-xs)
+      height: 200px

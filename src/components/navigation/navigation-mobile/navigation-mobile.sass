@@ -7,6 +7,9 @@
   height: 120px
   color: $white
 
+  @media(max-width: $screen-xs)
+    height: 68px
+
   &--scrolling
     background: $gullgray
 
@@ -21,20 +24,36 @@
     transition: all .35s ease-in-out
     z-index: 2
 
+    @media(max-width: $screen-xs)
+      top: 15px
+
     svg
       transition: all .35s ease-in-out
       width: 240px
       fill: $white
 
+      @media(max-width: $screen-xs)
+        width: 150px
+
     &--shrink
       svg
         width: 180px
+
+        @media(max-width: $screen-xs)
+          width: 120px
 
   &__hamburger
     @include hamburger-basic($white, .25s, 40px, 24px)
     position: absolute
     top: 48px
     right: 30px
+
+    @media(max-width: $screen-xs)
+      top: 20px
+
+    span
+      @media(max-width: $screen-xs)
+        height: rem-calc(5)
 
   &__drawer
     position: fixed
@@ -76,6 +95,9 @@
     margin: 20% 0 5%
     text-align: center
 
+    @media(max-width: $screen-xs)
+      margin: 25% 0 5%
+
   &__link
     @include animation-link-fade-up
     opacity: 0
@@ -84,6 +106,9 @@
     a
       color: $white
       font-size: 19px
+
+    @media(max-width: $screen-xs)
+      margin-top: 1rem
 
   &__bottom
     animation: mobile-fade .35s ease-in-out forwards .75s
@@ -108,6 +133,9 @@
     a
       color: $white
 
+    @media(max-width: $screen-xs)
+      margin-top: 2rem
+
   &__address
     margin-bottom: 32px
 
@@ -115,6 +143,10 @@
       margin-bottom: 16px
       width: 30px
       fill: $white
+
+      @media(max-width: $screen-xs)
+        margin-bottom: 8px
+        width: 20px
 
     &--icon
       text-align: center
@@ -128,6 +160,10 @@
       width: 45px
       fill: $white
 
+      @media(max-width: $screen-xs)
+        margin-bottom: 8px
+        width: 30px
+
     &--icon
       text-align: center
 
@@ -138,6 +174,9 @@
     display: flex
     justify-content: center
     margin-top: 32px
+
+    @media(max-width: $screen-xs)
+      margin-top: 8px
 
   &__facebook,
   &__instagram

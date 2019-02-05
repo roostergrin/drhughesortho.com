@@ -68,10 +68,16 @@
         .shift
           top: 22px
 
+          @media(max-width: $screen-xs)
+            top: 0
+
 
     @media(max-width: $screen-sm)
       margin-top: 32px
       margin-bottom: 32px
+
+    @media(max-width: $screen-xs)
+      padding: 0
 
   &__image-mask
     position: relative
@@ -96,6 +102,9 @@
     @media(max-width: $screen-sm)
       height: 445px
 
+    @media(max-width: $screen-xs)
+      height: 200px
+
   &__image
     position: absolute
     transform: translateX(-5%)
@@ -113,3 +122,6 @@
 
     @media(max-width: $screen-sm)
       height: 445px
+
+    @media(max-width: $screen-xs)
+      height: 200px

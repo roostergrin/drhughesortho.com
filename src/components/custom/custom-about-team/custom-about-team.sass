@@ -6,13 +6,16 @@
 
   &__mobile
     display: none
-    
+
     @media(max-width: $screen-sm)
       display: block
 
   &__background
     background: $teamgrey
     padding: 64px 0
+
+    @media(max-width: $screen-xs)
+      padding: 48px 30px
 
   &__title
     @extend h1
@@ -28,11 +31,17 @@
     font-size: 20px
     font-weight: 700
 
+    @media(max-width: $screen-xs)
+      font-size: 18px
+
   &__content
     margin: 0 auto
     margin-bottom: 44px
     max-width: 490px
     line-height: 24px
+
+    @media(max-width: $screen-xs)
+      margin-bottom: 36px
 
   &__full-member-container
     display: flex
@@ -80,6 +89,9 @@
     @media(max-width: $screen-sm)
       width: calc(50% - 4.5px)
 
+    @media(max-width: $screen-xs)
+      width: 100%
+
   &__black-overlay
     position: absolute
     top: 0
@@ -110,6 +122,9 @@
   &__position
     transition: all 0.3s ease-in-out
     color: $mineshaft
+
+    @media(max-width: $screen-xs)
+      font-size: 14px
 
   &__bio
     display: flex
