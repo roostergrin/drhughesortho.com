@@ -3,6 +3,11 @@
 <script>
 
 export default {
+  data () {
+    return {
+      activeTile: false
+    }
+  },
   props: ['props'],
   methods: {
     learnMore (path, scroll) {
@@ -20,6 +25,9 @@ export default {
       setTimeout(() => {
         this.$scrollTo(scroll, { offset: -68 })
       }, 500)
+    },
+    selectTile (j) {
+      this.activeTile = j
     }
   }
 }
