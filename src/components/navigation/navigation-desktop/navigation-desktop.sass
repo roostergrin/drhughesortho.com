@@ -48,13 +48,27 @@
       height: 24px
 
       svg
+        transition: all 0.4s ease-in-out
         width: 20px
         height: 24px
         fill: $white
 
     &--number
+      transition: all 0.4s ease-in-out
       color: $white
       font-weight: 300
+
+    &:hover
+      .navigation-desktop__phone--number
+        color: $deepseagreen
+
+      .navigation-desktop__phone--icon
+        svg
+          fill: $deepseagreen
+
+  &__logo-container
+    &:hover
+      cursor: pointer
 
   &__logo
     svg
@@ -76,17 +90,26 @@
     &:hover
       cursor: pointer
 
+      .navigation-desktop__login-icon
+        svg
+          fill: $deepseagreen
+
+      .navigation-desktop__login-text
+        color: $deepseagreen
+
   &__login-icon
     margin-right: 5px
     width: 20px
     height: 30px
 
     svg
+      transition: all 0.4s ease-in-out
       width: 20px
       height: 26px
       fill: $white
 
   &__login-text
+    transition: all 0.4s ease-in-out
     text-transform: uppercase
     color: $white
 
@@ -96,7 +119,16 @@
     margin-left: 8px
     cursor: pointer
 
+    &:hover
+      .navigation-desktop__menu
+        color: $deepseagreen
+
+      .navigation-desktop__hamburger
+        span
+          background: $deepseagreen
+
   &__menu
+    transition: all 0.25s ease-in-out
     margin-right: 6px
     width: 46px
     text-transform: uppercase

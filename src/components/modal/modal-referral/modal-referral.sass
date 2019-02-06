@@ -1,0 +1,72 @@
+.modal-referral
+  position: fixed
+  top: 0
+  z-index: 9999
+  width: 100%
+  height: 100%
+
+  &__bg
+    display: flex
+    position: relative
+    background-color: $black-shadow
+    height: 100%
+
+  &__container
+    display: flex
+    position: relative
+    align-items: center
+    justify-content: center
+    margin: auto
+    background: $white
+    padding: 6rem
+    padding-bottom: 1.5rem
+    max-width: 600px
+
+    @media(max-width: $screen-sm)
+      padding: 3rem
+      max-width: 100%
+      height: 600px
+
+  &__close-text
+    position: absolute
+    top: 18px
+    right: 42px
+    font-size: 20px
+
+    &:hover
+      cursor: pointer
+      color: $gullgray
+
+
+  &__close
+    position: absolute
+    top: 20px
+    right: 12px
+    width: 32px
+    height: 32px
+    color: $gullgray
+
+    &::before, &::after
+      position: absolute
+      left: 15px
+      background-color: $gullgray
+      width: 2px
+      height: 20px
+      content: ' '
+
+    &::before
+      transform: rotate(30deg)
+
+    &::after
+      transform: rotate(-30deg)
+
+    &:hover
+      cursor: pointer
+
+  &__body
+    width: 360px
+
+  &__title
+    margin-bottom: 30px
+    text-align: center
+    color: $gullgray

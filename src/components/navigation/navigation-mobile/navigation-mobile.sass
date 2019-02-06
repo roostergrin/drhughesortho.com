@@ -42,6 +42,21 @@
         @media(max-width: $screen-xs)
           width: 120px
 
+
+  &__nav-phone
+    position: absolute
+    top: 40px
+    left: 36px
+    svg
+      width: 40px
+      fill: $white
+
+      @media(max-width: $screen-xs)
+        width: 30px
+
+    @media(max-width: $screen-xs)
+      top: 20px
+
   &__hamburger
     @include hamburger-basic($white, .25s, 40px, 24px)
     position: absolute
@@ -137,9 +152,12 @@
       margin-top: 2rem
 
   &__address
+    display: flex
+    margin-top: 16px
     margin-bottom: 32px
 
     svg
+      margin-right: 16px
       margin-bottom: 16px
       width: 30px
       fill: $white
@@ -155,7 +173,12 @@
       display: inline-block
 
   &__phone
+    display: flex
+
     svg
+      position: relative
+      bottom: 8px
+      margin-right: 16px
       margin-bottom: 16px
       width: 45px
       fill: $white
@@ -173,10 +196,6 @@
   &__social
     display: flex
     justify-content: center
-    margin-top: 32px
-
-    @media(max-width: $screen-xs)
-      margin-top: 8px
 
   &__facebook,
   &__instagram

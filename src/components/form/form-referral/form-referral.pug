@@ -1,0 +1,37 @@
+.form-referral#form-referral
+  .form-referral__background
+    .form-referral__thank-you(v-if='formSuccess') Thank you for your submission! We will reply to you shortly!
+    .form-referral__container
+      form.form-referral__form(@submit.prevent='validate', method='post', v-if='!formSuccess')
+        
+        .form-referral__group
+          input.form-referral__input(name='doctorname', v-model='doctorname', v-validate="'required|alpha_spaces'", :class="{ 'form-referral__input--error': errors.has('doctorname') }", type='text', placeholder='Doctor Name')
+          .form-referral__message
+            transition(name='fade')
+              span(v-show="errors.has('doctorname')") Doctor's name is required. 
+              
+        .form-referral__group
+          input.form-referral__input(name='patientname', v-model='patientname', v-validate="'required|alpha_spaces'", :class="{ 'form-referral__input--error': errors.has('patientname') }", type='text', placeholder='Patient Name')
+          .form-referral__message
+            transition(name='fade')
+              span(v-show="errors.has('patientname')") Patient's name is required.
+        
+        .form-referral__group
+          input.form-referral__input(name='email', v-model='email', v-validate="'required|email'", :class="{ 'input': true, 'form-referral__input--error': errors.has('email') }", placeholder='Email')
+          .form-referral__message
+            transition(name='fade')
+              span(v-show="errors.has('email')") Please input a valid e-mail.
+        
+        .form-referral__group
+          input.form-referral__input(name='phone', v-model='phone', v-validate="'required|numeric'", :class="{ 'input': true, 'form-referral__input--error': errors.has('phone') }", placeholder='Phone Number')
+          .form-referral__message
+            transition(name='fade')
+              span(v-show="errors.has('phone')") Please input a valid phone number
+        
+        .form-referral__group
+          textarea.form-referral__input.form-referral__input--textarea(name='message', v-model='message' placeholder='Message')
+        
+        .form-referral__button-group
+          center
+            .form-referral__submit-button(@click='validate', :disabled='formSubmitted') Submit
+            .form-referral__spinner(v-if='formSubmitted && !formSuccess') Sending

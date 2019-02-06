@@ -18,7 +18,7 @@ export default {
     learnMoreMobile (path, scroll) {
       this.$router.push(path)
       setTimeout(() => {
-        this.$scrollTo(scroll, { offset: -120 })
+        this.$scrollTo(scroll, { offset: -68 })
       }, 500)
     }
   }

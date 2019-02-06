@@ -18,6 +18,10 @@ export default {
   methods: {
     toggleMenu () {
       this.showMenu = !this.showMenu
+    },
+    goHome () {
+      this.$router.push('/')
+      this.showMenu = false
     }
   }
 }

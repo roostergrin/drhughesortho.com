@@ -19,9 +19,12 @@
             Icon(name='Phone')
           a.footer__phone--text(v-html='props.acf.footer.phone')
       .footer__credit
-        .footer__referral
+        .footer__referral(@click='toggleModalReferral')
           .footer__referral--icon
             Icon(name='Referral')
           .footer__referral--text Refer a Patient
         .footer__copyright 2018 David Hughes Orthodontics
         a.footer__design(href='https://roostergrin.com', target='_blank') Online Advantage | Rooster Grin Media
+  
+  transition(name='fade-in-modal')
+    ModalReferral(v-if='showModalReferral', @closeReferralModal='toggleModalReferral')

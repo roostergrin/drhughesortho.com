@@ -1,0 +1,8 @@
+.modal-referral
+  .modal-referral__bg
+    .modal-referral__container
+      .modal-referral__close-text(@click='$emit("closeReferralModal")') close
+      .modal-referral__close(@click='$emit("closeReferralModal")')
+      .modal-referral__body
+        h3.modal-referral__title Patient Referrals
+        FormReferral

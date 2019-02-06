@@ -1,7 +1,10 @@
 .navigation-mobile(v-if='props', :class='{"navigation-mobile--scrolling": $store.state.nav}')
   .navigation-mobile__container
     .navigation-mobile__item
-      router-link.navigation-mobile__logo-container(to='/', @click='$store.state.menu = false')
+      a.navigation-mobile__nav-phone(:href='props.acf.navigation.phone_link')
+        Icon(name='Phone')
+    .navigation-mobile__item
+      .navigation-mobile__logo-container(@click='goHome()')
         Icon.navigation-mobile__logo(name='LogoWhite', :class="{ 'navigation-mobile__logo--shrink': $store.state.nav }")
   
     .navigation-mobile__item

@@ -20,7 +20,7 @@
       .custom-home-welcome__title(v-html='props.title')
       .custom-home-welcome__tagline(v-html='props.tagline')
       .custom-home-welcome__tiles
-        .custom-home-welcome__tile(v-for='(tile, j) in props.tiles', :style="{ backgroundImage: 'url(' + tile.background + ')'}", @click='learnMoreMobile(tile.link, tile.scroll)')
+        .custom-home-welcome__tile(v-for='(tile, j) in props.tiles', :style="{ backgroundImage: 'url(' + tile.background + ')'}")
           .custom-home-welcome__overlay-tile
           .custom-home-welcome__border-tile
           Icon.custom-home-welcome__heart(name='Heart')
@@ -29,4 +29,4 @@
             .custom-home-welcome__text(v-html='tile.text')
             .custom-home-welcome__learn-more
               Icon.custom-home-welcome__learn-more--icon(name='Triangle')
-              .custom-home-welcome__learn-more--text Learn More
+              .custom-home-welcome__learn-more--text(@click='learnMoreMobile(tile.link, tile.scroll)') Learn More
