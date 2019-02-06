@@ -3,6 +3,16 @@
 <script>
 
 export default {
-  props: ['props']
+  data () {
+    return {
+      activeMember: false
+    }
+  },
+  props: ['props'],
+  methods: {
+    selectMember (i) {
+      this.activeMember = i
+    }
+  }
 }
 </script>

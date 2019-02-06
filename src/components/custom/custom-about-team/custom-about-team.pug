@@ -29,7 +29,7 @@
     
     .custom-about-team__mobile
       .custom-about-team__full-member-container
-        .custom-about-team__member(v-for='(member, i) in props.members', :style="{ backgroundImage: 'url(' + member.image + ')'}")
+        .custom-about-team__member(v-for='(member, i) in props.members', :style="{ backgroundImage: 'url(' + member.image + ')'}", :class="{ 'custom-about-team__member--active': activeMember === i }", @click='selectMember(i)')
           .custom-about-team__black-overlay
           .custom-about-team__overlay
             .custom-about-team__name(v-html='member.name')
