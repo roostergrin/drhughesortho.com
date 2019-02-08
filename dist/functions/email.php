@@ -23,7 +23,7 @@ function rg_serve_route () {
 
   $data = json_decode(file_get_contents("php://input"), true);
   $from = 'info@wordpress.com';
-  $to = 'michael.cheng@roostergrin.com';
+  $to = 'info@drhughesortho.com';
   $subject = 'API Contact Form';
   $headers = array('Content-Type: text/html; charset=UTF-8');
   $message = '<html><body>';
@@ -69,7 +69,7 @@ function rg_serve_route_sponsorship () {
 
   $data = json_decode(file_get_contents("php://input"), true);
   $from = 'info@wordpress.com';
-  $to = 'michael.cheng@roostergrin.com';
+  $to = 'info@drhughesortho.com';
   $subject = 'API Contact Form';
   $headers = array('Content-Type: text/html; charset=UTF-8');
   $message = '<html><body>';
@@ -119,7 +119,7 @@ function rg_serve_route_referral () {
 
   $data = json_decode(file_get_contents("php://input"), true);
   $from = 'info@wordpress.com';
-  $to = 'michael.cheng@roostergrin.com';
+  $to = 'info@drhughesortho.com';
   $subject = 'API Contact Form';
   $headers = array('Content-Type: text/html; charset=UTF-8');
   $message = '<html><body>';
