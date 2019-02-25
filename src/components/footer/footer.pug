@@ -8,6 +8,9 @@
             Icon(name='Facebook')
           a.footer__social--instagram(:href='props.acf.footer.instagram', target='_blank')
             Icon(name='Instagram')
+      .footer__hours
+        .footer__hours--text Office Hours
+        .footer__hours--hours(v-html='props.acf.footer.hours')
       .footer__info
         a.footer__location(:href='props.acf.footer.address_link', target='_blank')
           .footer__location--icon
