@@ -17,3 +17,4 @@
       .custom-about-doctor__col
         .custom-about-doctor__image-mask(v-waypoint='{ active: true, callback: onWaypointDoctors}')
           .custom-about-doctor__image(:style="{ backgroundImage: 'url(' + doctor.image + ')' }")
+          .custom-about-doctor__image-alt(:style="{ backgroundImage: 'url(' + doctor.fun_image + ')'}", :class="{ 'custom-about-doctor__image-alt--active': activeTab === 1 && i === activeDoctor }")

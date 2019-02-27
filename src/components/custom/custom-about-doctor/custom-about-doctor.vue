@@ -13,6 +13,7 @@ export default {
     setActive (i, j) {
       this.activeDoctor = i
       this.activeTab = j
+      console.log(i, j)
     },
     onWaypointDoctors ({ going, direction, el }) {
       if (going === this.$waypointMap.GOING_IN) {
