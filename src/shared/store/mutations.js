@@ -1,4 +1,4 @@
-import { GET_PAGES, GET_APP, VIEW_NAV, VIEW_BODY, VIEW_TYPES, VIEW_SHOWMODAL, VIEW_MODALCONTENT, VIEW_MENU } from './mutation-types.js'
+import { GET_PAGES, GET_APP, VIEW_NAV, VIEW_BODY, LOADING, VIEW_TYPES, VIEW_SHOWMODAL, VIEW_MODALCONTENT, VIEW_MENU } from './mutation-types.js'
 
 const mutations = {
   [GET_PAGES] (state, data) {
@@ -11,6 +11,9 @@ const mutations = {
   //   state.blog.current_page.number = 1
   //   state.loading = false
   // },
+  [LOADING] (state, data) {
+    state.loading = data
+  },
   [GET_APP] (state, data) {
     state.app = data
   },
