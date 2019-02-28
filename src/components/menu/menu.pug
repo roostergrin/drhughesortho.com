@@ -14,7 +14,7 @@
       :class='{"active": $route.name  === link.name && !$store.state.menu, "menu__link-wrapper--current": $route.name === link.name, "not-active": $route.name  != link.name && $store.state.menu}'
       )
       .menu__link-container-video(v-if='link.video')
-        video.menu__link-video(loop muted autoplay)
+        video.menu__link-video(loop muted autoplay v-load-directive='')
           source(:src='link.video' type='video/mp4')
         .menu__link-overlay
         .menu__link-expanded-overlay(@click='closeMenu(link)')

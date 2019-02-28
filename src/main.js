@@ -13,6 +13,14 @@ import { Icon } from './resources/components'
 
 Vue.config.productionTip = false
 
+Vue.directive('load-directive', {
+  bind (el) {
+    el.addEventListener('loadeddata', function () {
+      store.dispatch('LOADING', false)
+    }, false)
+  }
+})
+
 /* eslint-disable no-new */
 new Vue({
   router,

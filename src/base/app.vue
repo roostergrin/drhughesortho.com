@@ -1,6 +1,7 @@
 <template lang="pug" src="./app.pug"></template>
 
 <script>
+import Loader from 'components/loader/loader'
 import Navigation from 'components/navigation/navigation'
 import Header from 'components/header/header'
 import Footer from 'components/footer/footer'
@@ -17,6 +18,7 @@ export default {
     this.$store.dispatch('VIEW_MENU', false)
   },
   components: {
+    Loader,
     Navigation,
     Header,
     Footer
