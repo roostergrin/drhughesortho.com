@@ -3,7 +3,7 @@ import { GET_PAGES, GET_APP, VIEW_NAV, VIEW_BODY, VIEW_TYPES, VIEW_SHOWMODAL, VI
 const mutations = {
   [GET_PAGES] (state, data) {
     state.pages = data
-    state.loading = false
+    // state.loading = false
   },
   // [GET_BLOG] (state, data) {
   //   state.blog = data
