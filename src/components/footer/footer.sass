@@ -24,6 +24,9 @@
       @media(max-width: $screen-xs)
         text-align: center
 
+    @media(max-width: $screen-xs)
+      text-align: center
+
     &--logos
       display: flex
 
@@ -47,6 +50,20 @@
 
       @media(max-width: $screen-xs)
         margin: 0 8px
+
+    &--reviews
+      display: inline-flex
+      transition: all 0.4s ease-in-out
+      margin-top: 16px
+      border: 1px solid $reviewgrey
+      padding: 10px 27px 7px 19px
+      color: $white
+      font-weight: 300
+
+      &:hover
+        border-color: $lightgray
+        cursor: pointer
+        color: $lightgray
 
   &__hours
 
