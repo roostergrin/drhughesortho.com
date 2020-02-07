@@ -8,9 +8,6 @@
       .navigation-desktop__logo-container(v-scroll-to='{el: "#head", container: "body", duration: 750, easing: "ease-in-out", x: false, y: true}',  @click='closeMenu')
         Icon.navigation-desktop__logo(name='LogoWhite', :class="{ 'navigation-desktop__logo--scroll': $store.state.nav }", @click='closeMenu')
     .navigation-desktop__item
-      a.navigation-desktop__login-container(:href='props.acf.navigation.login_link', target='_blank')
-        Icon.navigation-desktop__login-icon(name='Login')
-        .navigation-desktop__login-text Login
       .navigation-desktop__menu-container(@click='toggleMenu')
         .navigation-desktop__menu
           span(v-if='!$store.state.menu') Menu
