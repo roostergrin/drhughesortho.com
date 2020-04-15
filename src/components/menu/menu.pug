@@ -4,7 +4,8 @@
       .menu__tag-box(v-if='!$store.state.menu')
         .menu__tagline(v-html='$route.meta.tagline')
         center
-          .menu__appointment(@click='requestAppointment', v-if='$route.meta.appointment') Request Appointment
+          a.menu__appointment(href='https://formsroostergrin.com/drhughesortho/virtual-page/index.html', target='blank') Virtual Consultation
+        //-   .menu__appointment(@click='requestAppointment', v-if='$route.meta.appointment') Request Appointment
   .menu__container
     .menu__link-wrapper(
       v-for='(link, i) in links'
