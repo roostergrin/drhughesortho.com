@@ -25,3 +25,45 @@
 @import './base/*.sass'
 // @import './components/**/*.sass'
 @import './components/**/**/*.sass'
+
+.custom-about-team__bio
+  font-size: 13px
+  line-height: 18px
+  padding: 30px 15px
+
+.custom-about-team__full-member-container
+  align-items: center
+  justify-content: center
+  -webkit-box-align: center
+  -webkit-flex-align: center
+  -ms-flex-align: center
+
+.custom-about-team__member
+  width: 24.4%
+  margin: 4px   
+
+@media (min-width: 1251px) and (max-width: 1350px) 
+  .custom-about-team__member
+    width: 23.4%
+
+@media (min-width: 1024px) and (max-width: 1250px) 
+  .custom-about-team__member
+    width: 32.4%
+
+@media (min-width: 768px) and (max-width: 1024px) 
+  .custom-about-team__member
+    width: 48%
+
+@media (min-width: 574px) and (max-width: 767px) 
+  .custom-about-team__member
+    width: 48%    
+
+
+
+@media only screen and (max-width: 573px)
+  .custom-about-team__member
+    width: 100%
+
+  .custom-about-team__background
+    padding-left: 15px
+    padding-right: 15px      

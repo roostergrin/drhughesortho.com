@@ -8,7 +8,7 @@
             Icon(name='Facebook')
           a.footer__social--instagram(:href='props.acf.footer.instagram', target='_blank')
             Icon(name='Instagram')
-        a.footer__social--reviews(href='https://www.delugereviews.com/drhughesortho/', target='_blank') Write a Review
+        a.footer__social--reviews(:href='props.acf.footer.google_reviews_url', target='_blank') Write a Review
       .footer__hours
         .footer__hours--text Office Hours
         .footer__hours--hours(v-html='props.acf.footer.hours')
