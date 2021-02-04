@@ -8,7 +8,8 @@
             Icon(name='Facebook')
           a.footer__social--instagram(:href='props.acf.footer.instagram', target='_blank')
             Icon(name='Instagram')
-        a.footer__social--reviews(:href='props.acf.footer.google_reviews_url', target='_blank') Write a Review
+        a.footer__social--reviews(:href='props.acf.footer.google_reviews_url', target='_blank') Write a Google Review
+        a.footer__social--reviews(v-bind:href='props.acf.footer.facebook_reviews_url', target='_blank') Write a Facebook Review
       .footer__hours
         .footer__hours--text Office Hours
         .footer__hours--hours(v-html='props.acf.footer.hours')
@@ -27,8 +28,10 @@
           .footer__referral--icon
             Icon(name='Referral')
           .footer__referral--text Refer a Patient
-        .footer__copyright 2018 David Hughes Orthodontics
+        .footer__copyright 2020 David Hughes Orthodontics
         a.footer__design(href='https://roostergrin.com', target='_blank') Online Advantage | Rooster Grin Media
+      .footer__ortho
+        img(:src='props.acf.footer.footer_ortho_img' alt='')        
   
   transition(name='fade-in-modal')
     ModalReferral(v-if='showModalReferral', @closeReferralModal='toggleModalReferral')
