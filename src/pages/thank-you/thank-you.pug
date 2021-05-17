@@ -1,0 +1,6 @@
+.pages-about-us.thank-you
+  Loader(v-show='loading')
+  div(v-if='props')
+    HeroThank 
+    .thank-youinner
+      p(v-if='props.thank_you_message' v-html:p='props.thank_you_message')

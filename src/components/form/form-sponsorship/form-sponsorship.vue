@@ -53,6 +53,9 @@ export default {
       })
         .then(res => {
           setTimeout(() => {
+            window.location.href = 'https://www.drhughesortho.com/thank-you'
+          }, 400)
+          setTimeout(() => {
             this.formSuccess = true
             this.firstname = ''
             this.lastname = ''
@@ -64,7 +67,7 @@ export default {
             this.eventname = ''
             this.description = ''
             this.moneyrequested = ''
-          }, 500)
+          }, 1000)
         })
         .catch(e => { console.log(e) })
     }

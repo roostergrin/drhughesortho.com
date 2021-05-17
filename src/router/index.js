@@ -7,6 +7,7 @@ import FirstVisit from '@/pages/first-visit/first-visit'
 import Treatments from '@/pages/treatments/treatments'
 import Community from '@/pages/community/community'
 import Contact from '@/pages/contact/contact'
+import ThankYou from '@/pages/thank-you/thank-you'
 import Styleguide from '@/pages/styleguide/styleguide'
 import PageNotFound from '@/pages/404/404'
 import scrollBehavior from '@/shared/functionality/scroll-behavior'
@@ -83,6 +84,17 @@ const router = new VueRouter({
       image: 'http://d1t5yf0cbfi8hu.cloudfront.net/HeroContact.jpg',
       meta: {
         tagline: 'Contact',
+        short: true
+      }
+    },
+    {
+      path: '/thank-you',
+      name: 'About Us',
+      navigation: false,
+      component: ThankYou,
+      image: 'http://d1t5yf0cbfi8hu.cloudfront.net/HeroContact.jpg',
+      meta: {
+        tagline: 'Thank You',
         short: true
       }
     },

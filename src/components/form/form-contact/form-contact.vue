@@ -43,13 +43,16 @@ export default {
       })
         .then(res => {
           setTimeout(() => {
+            window.location.href = 'https://www.drhughesortho.com/thank-you'
+          }, 400)
+          setTimeout(() => {
             this.formSuccess = true
             this.firstname = ''
             this.lastname = ''
             this.email = ''
             this.phone = ''
             this.message = ''
-          }, 500)
+          }, 1000)
         })
         .catch(e => { console.log(e) })
     }

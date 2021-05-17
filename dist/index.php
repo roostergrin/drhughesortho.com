@@ -21,6 +21,40 @@
     ga('send', 'pageview');
   </script>
   <!-- GOOGLE ANALYTICS -->
+
+<!-- Global site tag (gtag.js) - Google Ads: 381056928 -->
+<scriptasync src="https://www.googletagmanager.com/gtag/js?id=AW-381056928"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+functiongtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'AW-381056928');
+</script>
+
+<script>
+gtag('config', 'AW-381056928/eK31CPbUiIoCEKDv2bUB', {
+    'phone_conversion_number': '703.451.0502'
+  });
+</script>
+
+
+<?php $actual_link = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+  if($actual_link=='https://www.drhughesortho.com/thank-you/'){ ?>
+<!-- Event snippet for Website Contact Form conversion page -->
+<script>
+gtag('event', 'conversion', {'send_to': 'AW-381056928/OI-iCNLjiIoCEKDv2bUB'});
+</script>
+
+<?php  } ?> 
+<?php $actual_link = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+  if($actual_link=='https://www.drhughesortho.com/thank-you'){ ?>
+<!-- Event snippet for Website Contact Form conversion page -->
+<script>
+gtag('event', 'conversion', {'send_to': 'AW-381056928/OI-iCNLjiIoCEKDv2bUB'});
+</script>
+<?php  } ?>
+
 </head>
 
 <body>
