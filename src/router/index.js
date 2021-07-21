@@ -34,7 +34,7 @@ const router = new VueRouter({
       name: 'About Us',
       navigation: true,
       component: AboutUs,
-      image: 'http://d1t5yf0cbfi8hu.cloudfront.net/HeroAboutUs.jpg',
+      image: 'https://d1t5yf0cbfi8hu.cloudfront.net/HeroAboutUs.jpg',
       meta: {
         tagline: 'About Us',
         short: true
@@ -57,7 +57,7 @@ const router = new VueRouter({
       name: 'Treatments',
       navigation: true,
       component: Treatments,
-      image: 'http://d1t5yf0cbfi8hu.cloudfront.net/HeroTreatments.jpg',
+      image: 'https://d1t5yf0cbfi8hu.cloudfront.net/HeroTreatments.jpg',
       meta: {
         tagline: 'Treatments',
         short: true,
@@ -69,7 +69,7 @@ const router = new VueRouter({
       name: 'Our Community',
       navigation: true,
       component: Community,
-      image: 'http://d1t5yf0cbfi8hu.cloudfront.net/HeroCommunity.jpg',
+      image: 'https://d1t5yf0cbfi8hu.cloudfront.net/HeroCommunity.jpg',
       meta: {
         tagline: 'Our Community',
         short: true,
@@ -81,7 +81,7 @@ const router = new VueRouter({
       name: 'Contact',
       navigation: true,
       component: Contact,
-      image: 'http://d1t5yf0cbfi8hu.cloudfront.net/HeroContact.jpg',
+      image: 'https://d1t5yf0cbfi8hu.cloudfront.net/HeroContact.jpg',
       meta: {
         tagline: 'Contact',
         short: true
@@ -92,7 +92,7 @@ const router = new VueRouter({
       name: 'About Us',
       navigation: false,
       component: ThankYou,
-      image: 'http://d1t5yf0cbfi8hu.cloudfront.net/HeroContact.jpg',
+      image: 'https://d1t5yf0cbfi8hu.cloudfront.net/HeroContact.jpg',
       meta: {
         tagline: 'Thank You',
         short: true
