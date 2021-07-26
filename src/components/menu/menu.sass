@@ -50,6 +50,13 @@
     color: $white
     font-size: 16px
 
+    &__image
+      width: 70px
+      margin-top: 0.5rem
+
+    &__image + .menu__appointment__image
+      margin-left: 0.5rem
+
     &:hover
       box-shadow: none
       background: $forestgreen
@@ -183,22 +190,17 @@
       &:first-child
         transform: translate(100%, 50%) matrix(4, 0, 0, 4, 0, 0)
 
-
       &:nth-child(2)
         transform: translate(0, 100%) matrix(3.999999, 0, 0, 3.999999, 0, 0)
-
 
       &:nth-child(3)
         transform: translate(-100%, 50%) matrix(4, 0, 0, 4, 0, 0)
 
-
       &:nth-child(4)
         transform: translate(100%, -50%) matrix(4, 0, 0, 4, 0, 0)
 
-
       &:nth-child(5)
         transform: translate(0, -50%) matrix(4, 0, 0, 4, 0, 0)
-
 
       &:nth-child(6)
         transform: translate(-100%, -50%) matrix(4, 0, 0, 4, 0, 0)
@@ -242,7 +244,6 @@
 
       @media screen and (max-height: 462px)
         display: none
-
 
   &__social-links
     position: absolute

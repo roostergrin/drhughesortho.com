@@ -12,7 +12,7 @@
 
   &__tag-box
     position: absolute
-    top: 50%
+    top: 60%
     left: 50%
     transform: translateX(-50%)
     width: 100%
@@ -24,7 +24,7 @@
     color: $white
     font-size: 42px
 
-    @media(max-width: $screen-xs)
+    @media(max-width: 600px)
       margin-bottom: 16px
       font-size: 24px
 
@@ -32,10 +32,18 @@
     display: inline-block
     background: $limegreen
     padding: 18px
+    margin: 0.5rem 0
     text-transform: uppercase
     color: $white
     font-size: 24px
 
-    @media(max-width: $screen-xs)
+    &__image
+      width: 95px
+      margin-top: 1rem
+
+    &__image + .hero-home__appointment__image
+      margin-left: 1rem
+
+    @media(max-width: 600px)
       padding: 12px 18px
       font-size: 12px
