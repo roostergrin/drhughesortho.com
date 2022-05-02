@@ -5,6 +5,7 @@ import Loader from 'components/loader/loader'
 import Navigation from 'components/navigation/navigation'
 import Header from 'components/header/header'
 import Footer from 'components/footer/footer'
+import BaseBaseAccess from 'components/base-access/index'
 
 export default {
   async created () {
@@ -21,7 +22,8 @@ export default {
     Loader,
     Navigation,
     Header,
-    Footer
+    Footer,
+    BaseBaseAccess
   },
   methods: {
     onWaypoint ({ going, direction }) {
