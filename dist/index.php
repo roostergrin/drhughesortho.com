@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> lang="en" role='main'>
+<html <?php language_attributes(); ?>>
 
 <head>
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" as="image" href="https://d1t5yf0cbfi8hu.cloudfront.net/HeroAboutUs.jpg">
   <?php wp_head(); ?>
   <!-- GOOGLE ANALYTICS -->
   <script>
@@ -23,7 +24,7 @@
   <!-- GOOGLE ANALYTICS -->
 
 <!-- Global site tag (gtag.js) - Google Ads: 381056928 -->
-<scriptasync src="https://www.googletagmanager.com/gtag/js?id=AW-381056928"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-381056928"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 functiongtag(){dataLayer.push(arguments);}
