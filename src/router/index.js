@@ -35,7 +35,7 @@ const router = new VueRouter({
       name: 'About Us',
       navigation: true,
       component: AboutUs,
-      image: 'https://d1t5yf0cbfi8hu.cloudfront.net/HeroAboutUs.jpg',
+      image: 'https://d1t5yf0cbfi8hu.cloudfront.net/AboutHero2.jpg',
       meta: {
         tagline: 'About Us',
         short: true
