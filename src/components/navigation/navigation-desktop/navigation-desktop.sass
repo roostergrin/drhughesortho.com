@@ -6,6 +6,18 @@
   width: 100%
   color: $white
 
+  &__logo
+    transition: all .2s ease-in-out;
+    width: 160px
+    height: 56px
+
+  &__logo--scroll
+    width: 260px
+    height: 92px
+    transition: all .2s ease-in-out;
+    margin-top: -20px
+    padding: 10px
+
   &__scroll
     background: $gullgray
 
@@ -29,14 +41,14 @@
     &:nth-child(2)
       position: absolute
       top: 20px
-      left: calc(50% - 130px)
+      left: calc(50% - 80px)
 
     &:last-child
       justify-content: flex-end
 
     &--scroll
       top: 14px !important
-      left: calc(50% - 80px) !important
+      left: calc(50% - 120px) !important
 
   &__phone
     display: flex

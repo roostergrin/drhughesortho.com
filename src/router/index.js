@@ -58,7 +58,7 @@ const router = new VueRouter({
       name: 'Treatments',
       navigation: true,
       component: Treatments,
-      image: 'https://d1t5yf0cbfi8hu.cloudfront.net/HeroTreatments.jpg',
+      image: 'https://d1t5yf0cbfi8hu.cloudfront.net/TreatmentsHero.jpg',
       meta: {
         tagline: 'Treatments',
         short: true,

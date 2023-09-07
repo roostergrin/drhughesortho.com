@@ -6,6 +6,7 @@ import HeroFirstVisit from 'components/hero/hero-first-visit/hero-first-visit'
 import BlockRows from 'components/block/block-rows/block-rows'
 import BlockParallax from 'components/block/block-parallax/block-parallax'
 import BlockTestimonials from 'components/block/block-testimonials/block-testimonials'
+import CustomAboutOffice from 'components/custom/custom-about-office/custom-about-office'
 
 export default {
   computed: {
@@ -21,7 +22,8 @@ export default {
     HeroFirstVisit,
     BlockRows,
     BlockParallax,
-    BlockTestimonials
+    BlockTestimonials,
+    CustomAboutOffice
   }
 }
 </script>

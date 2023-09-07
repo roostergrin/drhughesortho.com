@@ -6,7 +6,7 @@
         .navigation-desktop__phone--number(v-html='props.acf.navigation.phone')
     .navigation-desktop__item(:class="{ 'navigation-desktop__item--scroll': $store.state.nav }")
       .navigation-desktop__logo-container(v-scroll-to='{el: "#head", container: "body", duration: 750, easing: "ease-in-out", x: false, y: true}',  @click='closeMenu')
-        Icon.navigation-desktop__logo(name='LogoWhite', :class="{ 'navigation-desktop__logo--scroll': $store.state.nav }", @click='closeMenu')
+        img.navigation-desktop__logo(src='http://www.drhughesortho.com/wp-content/uploads/white-Hughes_Orthodontics_logo-HighRes.png',:class="{ 'navigation-desktop__logo--scroll': $store.state.nav }", @click='closeMenu')
     .navigation-desktop__item
       .navigation-desktop__menu-container(@click='toggleMenu')
         .navigation-desktop__menu
