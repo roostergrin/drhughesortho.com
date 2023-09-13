@@ -23,7 +23,7 @@ const router = new VueRouter({
       name: 'Home',
       navigation: true,
       component: Home,
-      video: '/static/HomeVideo.mp4',
+      video: '/static/Home-Video-Hero.mp4',
       meta: {
         tagline: 'Smiles, Inside and Out ',
         short: false,
@@ -35,7 +35,7 @@ const router = new VueRouter({
       name: 'About Us',
       navigation: true,
       component: AboutUs,
-      image: 'https://d1t5yf0cbfi8hu.cloudfront.net/About-Us-Hero.jpg',
+      video: '/static/About-Us-Video-Hero.mp4',
       meta: {
         tagline: 'About Us',
         short: true
@@ -46,7 +46,7 @@ const router = new VueRouter({
       name: 'New Patients',
       navigation: true,
       component: FirstVisit,
-      video: '/static/FirstVisitVideo.mp4',
+      video: '/static/New-Patients-Video-Hero.mp4',
       meta: {
         tagline: 'New Patients',
         short: false,
