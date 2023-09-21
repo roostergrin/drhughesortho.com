@@ -104,7 +104,7 @@ gtag('event', 'conversion', {'send_to': 'AW-381056928/OI-iCNLjiIoCEKDv2bUB'});
 <script src="https://onlineschedulingv2.threadcommunication.com" type="text/javascript"></script>
 <script type="text/javascript">
   OpenChair.init({ token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJvcmlnaW4iOiJodHRwczovL2RyaHVnaGVzb3J0aG8uY29tLyIsInByYWN0aWNlX2lkIjoiODc4In0.kYtl33_v-Ns39Xgc8UpwnprsK_uaIPYWAyAhw9ssBrk", extraQuestion: { question: "Are you currently in orthodontic treatment with another provider? If yes, please call the office directly to schedule. ", keyname: "In_ortho_treatment", option1: "Yes", option2: "No", }, })
-</script>>
+</script>
 
 <div id="accessibilityWidget" tabindex="0">Click for Accessibility</div>
   

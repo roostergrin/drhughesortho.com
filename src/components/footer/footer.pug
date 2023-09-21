@@ -31,7 +31,12 @@
         .footer__copyright 2020 David Hughes Orthodontics
         a.footer__design(href='https://roostergrin.com', target='_blank') Online Advantage | Rooster Grin Media
       .footer__ortho
-        img(:src='props.acf.footer.footer_ortho_img' alt='')        
-  
+        .footer__items
+          img(:src='props.acf.footer.footer_ortho_img', alt="hello")
+        .footer__items
+          img(:src='props.acf.footer.footer_virginia_image', alt="Virginia Dental Image")
+        .footer__items
+          img(:src='props.acf.footer.footer_nova_image', alt="Nova")
+
   transition(name='fade-in-modal')
     ModalReferral(v-if='showModalReferral', @closeReferralModal='toggleModalReferral')
