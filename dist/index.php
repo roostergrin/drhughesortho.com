@@ -6,6 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preload" as="image" href="https://d1t5yf0cbfi8hu.cloudfront.net/HeroAboutUs.jpg">
   <?php wp_head(); ?>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KLVWHCXZ');</script>
+  <!-- End Google Tag Manager -->
+
   <!-- GOOGLE ANALYTICS -->
   <script>
     (function (i, s, o, g, r, a, m) {
@@ -59,6 +68,7 @@ gtag('event', 'conversion', {'send_to': 'AW-381056928/OI-iCNLjiIoCEKDv2bUB'});
 </head>
 
 <body>
+
   <div id='app' role='application'></div>
   <?php wp_footer(); ?>
   <script type="text/javascript">
@@ -108,6 +118,10 @@ gtag('event', 'conversion', {'send_to': 'AW-381056928/OI-iCNLjiIoCEKDv2bUB'});
 
 <div id="accessibilityWidget" tabindex="0">Click for Accessibility</div>
   
+<!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLVWHCXZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 </body>
 
 </html>
