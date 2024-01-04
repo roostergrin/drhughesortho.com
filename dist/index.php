@@ -5,6 +5,7 @@
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preload" as="image" href="https://d1t5yf0cbfi8hu.cloudfront.net/HeroAboutUs.jpg">
+  <meta name="google-site-verification" content="40YgJgcKDZuZ4y7IUnu-g82CwVyceHgRsA_mFhQnv7Q" />
   <?php wp_head(); ?>
 
   <!-- Google Tag Manager -->
