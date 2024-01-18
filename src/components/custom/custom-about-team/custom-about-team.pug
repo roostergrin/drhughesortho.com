@@ -4,13 +4,16 @@
     .custom-about-team__tagline(v-html='props.tagline')
     .custom-about-team__content(v-html='props.content')
     .custom-about-team__desktop
-      .custom-about-team__full-member-container
-        .custom-about-team__member(v-for='(member, i) in props.members', :style="{ backgroundImage: 'url(' + member.image + ')'}", v-if='i <= 9')
-          .custom-about-team__black-overlay
-          .custom-about-team__overlay
-            .custom-about-team__name(v-html='member.name')
-            .custom-about-team__position(v-html='member.position')
-          .custom-about-team__bio(v-html='member.bio')
+      .custom-about-team__full-member-container    
+        Carousel(:navigationEnabled='true', :autoplay='false', :perPage='1', :loop='true', :navigationNextLabel='arrowNext', :navigationPrevLabel='arrowPrev', paginationActiveColor='#0f878e', paginationColor='#000', :paginationSize='10', :perPageCustom="[[350, 1], [650, 2], [1024, 3]]")
+          Slide(v-for='(member, i) in props.members', :key='i')
+            .custom-about-team__memberimage-wrap
+              img.custom-about-team__memberimage(v-bind:src='member.image' alt='')
+              .custom-about-team__black-overlay  
+              .custom-about-team__overlay
+                .custom-about-team__name(v-html='member.name')
+                .custom-about-team__position(v-html='member.position')
+              .custom-about-team__bio(v-html='member.bio')
       .custom-about-team__partial-member-container
         .custom-about-team__member(v-for='(member, i) in props.members', :style="{ backgroundImage: 'url(' + member.image + ')'}", v-if='i >= 10 && i <= 10')
           .custom-about-team__black-overlay
@@ -20,16 +23,6 @@
           .custom-about-team__bio(v-html='member.bio')
       .custom-about-team__partial-member-container
         .custom-about-team__member(v-for='(member, i) in props.members', :style="{ backgroundImage: 'url(' + member.image + ')'}", v-if='i >= 13')
-          .custom-about-team__black-overlay
-          .custom-about-team__overlay
-            .custom-about-team__name(v-html='member.name')
-            .custom-about-team__position(v-html='member.position')
-          .custom-about-team__bio(v-html='member.bio')
-    
-    
-    .custom-about-team__mobile
-      .custom-about-team__full-member-container
-        .custom-about-team__member(v-for='(member, i) in props.members', :style="{ backgroundImage: 'url(' + member.image + ')'}", :class="{ 'custom-about-team__member--active': activeMember === i }", @click='selectMember(i)')
           .custom-about-team__black-overlay
           .custom-about-team__overlay
             .custom-about-team__name(v-html='member.name')

@@ -5,7 +5,7 @@ export default {
   data () {
     return {
       swiperOption: {
-        slidesPerView: 1,
+        slidesPerView: 3,
         loop: true,
         autoplay: {
           delay: 5000

@@ -1,8 +1,6 @@
 .custom-about-team
 
   &__desktop
-    @media(max-width: $screen-sm)
-      display: none
 
   &__mobile
     display: none
@@ -49,6 +47,7 @@
     justify-content: space-between
     margin: 0 auto
     max-width: 1440px
+    padding: 0 45px
 
   &__partial-member-container
     display: flex
@@ -66,6 +65,29 @@
       @media(max-width: $screen-sm)
         margin: 0
         margin-bottom: 6px
+
+  &__memberimage-wrap
+    position: relative
+
+    &:hover
+      .custom-about-team__overlay
+        opacity: 0
+
+      .custom-about-team__name
+        opacity: 0
+
+      .custom-about-team__position
+        opacity: 0
+
+      .custom-about-team__bio
+        opacity: 1
+
+      .custom-about-team__black-overlay
+        opacity: 0.2    
+
+  &__memberimage
+    max-width: 100%
+    padding: 15px        
 
   &__member
     @extend .image-norm
@@ -125,7 +147,7 @@
 
   &__overlay
     position: absolute
-    bottom: 18px
+    bottom: 17px
     left: 0
     transition: all 0.3s ease-in-out
     background: rgba(255, 255, 255, 0.81)
@@ -161,3 +183,21 @@
     height: 100%
     line-height: 1.5
     font-size: 14px
+
+.custom-about-team__full-member-container .VueCarousel-dot-container
+  margin-top: 0px !important
+
+.custom-about-team__arrow svg
+  width: 40px
+  height: 40px
+  fill: #0f878e
+
+.custom-about-team__arrow:hover svg  
+  fill: #7b8795
+  transition: all .4s ease-in-out  
+
+.custom-about-team__full-member-container .VueCarousel-navigation-prev
+  left: 18px !important
+
+.custom-about-team__full-member-container .VueCarousel-navigation-next
+  right: 18px !important       
