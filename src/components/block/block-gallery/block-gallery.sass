@@ -1,4 +1,6 @@
 .block-gallery
+  margin-left: 30px
+  margin-right: 30px
 
   &__title
     @extend h1
@@ -20,29 +22,26 @@
     @extend .image-norm
     transition: opacity 0.4s ease-in-out
     opacity: 0
-    width: calc(33.33% - 16px)
-    height: 356px
-
-    &:first-child
-      margin-right: 24px
-
-      @media(max-width: $screen-xs)
-        margin: 0
-        margin-bottom: 24px
-
-    &:last-child
-      margin-left: 24px
-
-      @media(max-width: $screen-xs)
-        margin: 0
-        margin-top: 24px
+    max-width: 100%
+    padding: 0 15px
 
     &--active
       opacity: 1
 
-    @media(max-width: $screen-sm)
-      height: 200px
+.block-gallery .VueCarousel-dot-container
+  margin-top: 0px !important
 
-    @media(max-width: $screen-xs)
-      width: 100%
-      height: 300px
+.block-gallery__arrow svg
+  width: 40px
+  height: 40px
+  fill: #0f878e
+
+.block-gallery__arrow:hover svg  
+  fill: #7b8795
+  transition: all .4s ease-in-out  
+
+.block-gallery .VueCarousel-navigation-prev
+  left: 8px !important
+
+.block-gallery .VueCarousel-navigation-next
+  right: 8px !important        
