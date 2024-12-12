@@ -30,15 +30,13 @@
           .footer__referral--text Refer a Patient
         .footer__copyright 2020 David Hughes Orthodontics
         a.footer__design(href='https://roostergrin.com', target='_blank') Online Advantage | Rooster Grin Media
-      .footer__ortho
-        .footer__items
-          img(:src='props.acf.footer.footer_ortho_img', alt="hello")
-        .footer__items
-          img(:src='props.acf.footer.footer_virginia_image', alt="Virginia Dental Image")
-        .footer__items
-          img(:src='props.acf.footer.footer_nova_image', alt="Nova")
-        .footer__items
-          img(:src='props.acf.footer.footer_hof_image', alt="Hall of Fame")
+      .footer__logo
+        a.footer__logolink(href='https://drhughesortho.patientrewardshub.com/' target='_blank')
+          h5.footer__logoheading
+            | Patient Rewards
+          img.footer__logolinkimg(src='https://www.drhughesortho.com/wp-content/uploads/patient-rewards-kids-club.png' alt='patient-rewards-kids')
+          img.footer__logolinkimg(src='https://www.drhughesortho.com/wp-content/uploads/patient-rewards-1.png' alt='brand-images')
+
 
   transition(name='fade-in-modal')
     ModalReferral(v-if='showModalReferral', @closeReferralModal='toggleModalReferral')

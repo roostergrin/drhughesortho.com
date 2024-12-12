@@ -1,0 +1,55 @@
+.menu(v-if='props')
+  .menu__overlay(:class="{ 'menu__overlay--short': $route.meta.short }")
+    transition(name='title-fade')
+      .menu__tag-box(v-if='!$store.state.menu')
+        .menu__tagline(v-html='$route.meta.tagline')
+        center.menu__form-links-ctnr
+          a.menu__appointment(href='/?schedule_consultation=true') Schedule Consultation
+          // a.menu__appointment(href='https://formsroostergrin.com/drhughesortho/aao-forms/combined/Privacy_Covid_Consent_Form.html', target='_blank') COVID-19 Form
+          //- a.menu__appointment(href='https://drhughesortho.patientrewardshub.com/', target='_blank') Patient Rewards
+          //- Hey dude! You're trying to add a container like in the figma file with angie you did
+          //-
+          a.menu__appointment(href='https://drhughesortho.patientrewardshub.com/', target='_blank') Patient Rewards
+            .hero-home__button__container
+              img.menu__appointment__image(src="https://www.drhughesortho.com/wp-content/uploads/patient-rewards-kids-club.png")
+              img.menu__appointment__image(src="https://www.drhughesortho.com/wp-content/uploads/patient-rewards-1.png")
+          //- a.hero-home__button__link(href='https://drhughesortho.patientrewardshub.com/', target='_blank') Patient Rewards
+          //-   .hero-home__button__container
+          //-   img.hero-home__appointment__image(src="https://files.patientrewardshub.com/identity/FlGGshpUVCJBcQBNkju4zE5bh9GqACmQyHZAZ6jb.png")
+          //-   img.hero-home__appointment__image(src="https://files.patientrewardshub.com/identity/FlGGshpUVCJBcQBNkju4zE5bh9GqACmQyHZAZ6jb.png")
+        //-   .menu__appointment(@click='requestAppointment', v-if='$route.meta.appointment') Request Appointment
+
+  .menu__container
+    .menu__link-wrapper(
+      v-for='(link, i) in links'
+      :key='i'
+      v-if='link.navigation'
+      :style="styleObject"
+      :class='{"active": $route.name  === link.name && !$store.state.menu, "menu__link-wrapper--current": $route.name === link.name, "not-active": $route.name  != link.name && $store.state.menu}'
+      )
+      .menu__link-container-video(v-if='link.video')
+        video.menu__link-video(loop muted autoplay v-load-directive='')
+          source(:src='link.video' type='video/mp4')
+        .menu__link-overlay
+        .menu__link-expanded-overlay(@click='closeMenu(link)')
+        .menu__link(@click='closeMenu(link)') {{ link.name }}
+
+      .menu__link-container-image(
+        v-if='link.image'
+        :class='{"menu__link-container-image--disabled": !$store.state.menu}'
+        :style="{backgroundImage: 'url(' + link.image + ')'}"
+        )
+        .menu__link-overlay
+        .menu__link-expanded-overlay(@click='closeMenu(link)')
+        .menu__link(@click='closeMenu(link)') {{ link.name }}
+        .menu__submenu(v-if='link.children')
+
+  //- .menu__waypoint-container
+  //-   .menu__waypoint(v-waypoint="{ active: true, callback: onWaypoint }")
+  transition(name='social-fade')
+    .menu__social-links(v-if='$store.state.menu')
+      a.menu__facebook(:href='props.acf.navigation.facebook', target='_blank')
+        Icon(name='Facebook')
+      a.menu__instagram(:href='props.acf.navigation.instagram', target='_blank')
+        Icon(name='Instagram')
+
