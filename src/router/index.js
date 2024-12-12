@@ -65,24 +65,12 @@ const router = new VueRouter({
         appointment: true
       }
     },
-    // {
-    //   path: '/community',
-    //   name: 'Our Community',
-    //   navigation: true,
-    //   component: Community,
-    //   image: 'https://d1t5yf0cbfi8hu.cloudfront.net/HeroCommunity.jpg',
-    //   meta: {
-    //     tagline: 'Our Community',
-    //     short: true,
-    //     appointment: true
-    //   }
-    // },
     {
       path: '/community',
       name: 'Our Community',
       navigation: true,
       component: Community,
-      image: '/static/OurCommunityHero2.jpg',
+      image: 'https://d1t5yf0cbfi8hu.cloudfront.net/HeroCommunity.jpg',
       meta: {
         tagline: 'Our Community',
         short: true,
