@@ -37,8 +37,8 @@
           img(:src='props.acf.footer.footer_virginia_image', alt="Virginia Dental Image")
         .footer__items
           img(:src='props.acf.footer.footer_nova_image', alt="Nova")
-        .footer__items
-          img(:src='props.acf.footer.footer_hof_image', alt="Hall of Fame")
+        //- .footer__items
+        //-   img(:src='props.acf.footer.footer_hof_image', alt="Hall of Fame")
 
   transition(name='fade-in-modal')
     ModalReferral(v-if='showModalReferral', @closeReferralModal='toggleModalReferral')
