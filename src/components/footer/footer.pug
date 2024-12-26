@@ -40,5 +40,10 @@
       //-   .footer__items
       //-     img(:src='props.acf.footer.footer_hof_image', alt="Hall of Fame")
 
+      a.patient-rewards-container(href='https://drhughesortho.patientrewardshub.com/', target='_blank') Patient Rewards
+        .patient-rewards__button__container
+          img.menu__appointment__image(src="https://www.drhughesortho.com/wp-content/uploads/patient-rewards-kids-club.png")
+          img.menu__appointment__image(src="https://www.drhughesortho.com/wp-content/uploads/patient-rewards-1.png")
+
   transition(name='fade-in-modal')
     ModalReferral(v-if='showModalReferral', @closeReferralModal='toggleModalReferral')

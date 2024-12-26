@@ -57,7 +57,7 @@ gtag('config', 'AW-381056928/eK31CPbUiIoCEKDv2bUB', {
 gtag('event', 'conversion', {'send_to': 'AW-381056928/OI-iCNLjiIoCEKDv2bUB'});
 </script>
 
-<?php  } ?> 
+<?php  } ?>
 <?php $actual_link = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
   if($actual_link=='https://www.drhughesortho.com/thank-you'){ ?>
 <!-- Event snippet for Website Contact Form conversion page -->
@@ -98,8 +98,8 @@ gtag('event', 'conversion', {'send_to': 'AW-381056928/OI-iCNLjiIoCEKDv2bUB'});
     }
 
   </script>
-  
-  <script type="text/javascript"> 
+
+  <script type="text/javascript">
   (function(d){
     var s = d.createElement("script");
     s.setAttribute("data-account", "D3656BNpyD");
@@ -109,14 +109,20 @@ gtag('event', 'conversion', {'send_to': 'AW-381056928/OI-iCNLjiIoCEKDv2bUB'});
   (function(d){
     var ns = d.createElement("noscript");
     ns.innerHTML = `Please ensure Javascript is enabled for purposes of <a href="https://userway.org">website accessibility</a>`;
-    (d.body || d.head).appendChild(ns);})(document);    
+    (d.body || d.head).appendChild(ns);})(document);
 </script>
 
-<script src="https://onlineschedulingv2.threadcommunication.com" type="text/javascript"></script> 
-<script type="text/javascript">   OpenChair.init({     token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJvcmlnaW4iOiJodHRwczovL2RyaHVnaGVzb3J0aG8uY29tLyIsInByYWN0aWNlX2lkIjoiODc4In0.kYtl33_v-Ns39Xgc8UpwnprsK_uaIPYWAyAhw9ssBrk",     hideTooltipHeader: true,   }) </script>
+<script src="https://onlineschedulingv2.threadcommunication.com" type="text/javascript"></script>
+<script type="text/javascript">
+  OpenChair.init({
+    token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJvcmlnaW4iOiJodHRwczovL2RyaHVnaGVzb3J0aG8uY29tLyIsInByYWN0aWNlX2lkIjoiODc4In0.kYtl33_v-Ns39Xgc8UpwnprsK_uaIPYWAyAhw9ssBrk",
+    hideTooltipHeader: true,
+    // customSubHeaderMessage: "Schedule A Free Consultation"
+
+  }) </script>
 
 <div id="accessibilityWidget" tabindex="0">Click for Accessibility</div>
-  
+
 <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLVWHCXZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
