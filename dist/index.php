@@ -117,7 +117,7 @@ gtag('event', 'conversion', {'send_to': 'AW-381056928/OI-iCNLjiIoCEKDv2bUB'});
   OpenChair.init({
     token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJvcmlnaW4iOiJodHRwczovL2RyaHVnaGVzb3J0aG8uY29tLyIsInByYWN0aWNlX2lkIjoiODc4In0.kYtl33_v-Ns39Xgc8UpwnprsK_uaIPYWAyAhw9ssBrk",
     hideTooltipHeader: true,
-    // customSubHeaderMessage: "Schedule A Free Consultation"
+    customSubHeaderMessage: "Schedule A Free Consultation"
 
   }) </script>
 
