@@ -70,7 +70,7 @@ const router = new VueRouter({
       name: 'Our Community',
       navigation: true,
       component: Community,
-      image: 'https://d1t5yf0cbfi8hu.cloudfront.net/OurCommunityHeroNew.jpg',
+      image: 'https://d1t5yf0cbfi8hu.cloudfront.net/HeroCommunity.jpg',
       meta: {
         tagline: 'Our Community',
         short: true,
