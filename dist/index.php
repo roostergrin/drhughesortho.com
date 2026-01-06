@@ -112,6 +112,7 @@ gtag('event', 'conversion', {'send_to': 'AW-381056928/OI-iCNLjiIoCEKDv2bUB'});
     (d.body || d.head).appendChild(ns);})(document);
 </script>
 
+<!--
 <script src="https://onlineschedulingv2.threadcommunication.com" type="text/javascript"></script>
 <script type="text/javascript">
   OpenChair.init({
@@ -120,6 +121,7 @@ gtag('event', 'conversion', {'send_to': 'AW-381056928/OI-iCNLjiIoCEKDv2bUB'});
     customSubHeaderMessage: "Schedule A Free Consultation"
 
   }) </script>
+    -->
 
 <div id="accessibilityWidget" tabindex="0">Click for Accessibility</div>
 
